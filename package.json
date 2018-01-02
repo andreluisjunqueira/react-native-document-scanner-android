@@ -23,8 +23,7 @@
 	  "url": "https://github.com/andreluisjunqueira/react-native-documentscanner-android/issues"
 	},
 	"homepage": "https://github.com/andreluisjunqueira/react-native-documentscanner-android",
-	"peerDependencies": {
-	  "react-native": "*",
+	"dependencies": {
 	  "prop-types":"^15.6.0"
 	},
 	"devDependencies": {
