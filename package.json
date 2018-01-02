@@ -1,0 +1,41 @@
+
+{
+	"name": "react-native-documentscanner-android",
+	"version": "0.1.0",
+	"description": "React Native Module to auto detect documents",
+	"main": "DocumentScanner.js",
+	"scripts": {
+	},
+	"repository": {
+	  "type": "git",
+	  "url": "git+ssh://git@github.com/isnifer/react-native-module-boilerplate.git"
+	},
+	"keywords": [
+	  "react",
+	  "react-native",
+	  "android",
+	  "scanner",
+	  "document"
+	],
+	"author": "Andre Junqueira",
+	"license": "MIT",
+	"bugs": {
+	  "url": "https://github.com/isnifer/react-native-module-boilerplate/issues"
+	},
+	"homepage": "https://github.com/isnifer/react-native-module-boilerplate#readme",
+	"rnpm": {
+	  "commands": {
+		"prelink": "node_modules/react-native-module-boilerplate/scripts/pre-link.sh",
+		"postlink": "node_modules/react-native-module-boilerplate/scripts/post-link.sh"
+	  }
+	},
+	"peerDependencies": {
+	  "react-native": "*",
+	  "prop-types":"^15.6.0"
+	},
+	"devDependencies": {
+	  "babel-eslint": "^7.0.0",
+	  "eslint": "^3.7.1",
+	  "eslint-config-tipsi": "^12.0.0"
+	}
+  }

@@ -1,0 +1,1 @@
+## React Native module to auto scan documents
