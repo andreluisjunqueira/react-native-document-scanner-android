@@ -8,7 +8,7 @@
 	},
 	"repository": {
 	  "type": "git",
-	  "url": "git+ssh://git@github.com/isnifer/react-native-module-boilerplate.git"
+	  "url": "git+git@github.com:andreluisjunqueira/react-native-documentscanner-android.git"
 	},
 	"keywords": [
 	  "react",
@@ -20,15 +20,9 @@
 	"author": "Andre Junqueira",
 	"license": "MIT",
 	"bugs": {
-	  "url": "https://github.com/isnifer/react-native-module-boilerplate/issues"
+	  "url": "https://github.com/andreluisjunqueira/react-native-documentscanner-android/issues"
 	},
-	"homepage": "https://github.com/isnifer/react-native-module-boilerplate#readme",
-	"rnpm": {
-	  "commands": {
-		"prelink": "node_modules/react-native-module-boilerplate/scripts/pre-link.sh",
-		"postlink": "node_modules/react-native-module-boilerplate/scripts/post-link.sh"
-	  }
-	},
+	"homepage": "https://github.com/andreluisjunqueira/react-native-documentscanner-android",
 	"peerDependencies": {
 	  "react-native": "*",
 	  "prop-types":"^15.6.0"
