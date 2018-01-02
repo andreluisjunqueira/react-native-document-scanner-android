@@ -98,6 +98,12 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     private boolean scanClicked = false;
     private boolean mVisible;
 
+    private boolean documentAnimation = false;
+    private int numberOfRectangles = 15;
+    private Boolean enableTorch = false;
+    private String overlayColor = null;
+
+
     public static OpenNoteCameraView mThis;
 
     private OnScannerListener listener;
@@ -110,8 +116,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         this.listener = listener;
     }
 
-
-    private boolean documentAnimation = false;
 
     public OpenNoteCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -132,9 +136,21 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     }
 
+
     public void setDocumentAnimation(boolean animate){
         this.documentAnimation = animate;
     }
+    public void setOverlayColor(String rgbaColor){
+        this.overlayColor = rgbaColor;
+    }
+    public void setDetectionCountBeforeCapture(int numberOfRectangles){
+        this.numberOfRectangles = numberOfRectangles;
+    }
+    public void setEnableTorch(boolean enableTorch){
+        Log.d("TORCH", enableTorch+"");
+        this.enableTorch = enableTorch;
+    }
+
 
     public void initOpenCv(Context context){
 
@@ -172,13 +188,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         };
 
         if(!OpenCVLoader.initDebug()){
-            Log.d("INITTTTTT","Internal OpenCV library not found. Using OpenCV Manager for initialization");
-
             CustomOpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_1_0, context, mLoaderCallback);
-
         }else{
-            Log.d("INITTTTTT","OpenCV library found inside package. Using it!");
-
             mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
         }
 
@@ -345,6 +356,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         }
 
         PackageManager pm = mActivity.getPackageManager();
+        Log.d("AQUII", enableTorch+"");
+
         if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)) {
             param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
             Log.d(TAG, "enabling autofocus");
@@ -353,7 +366,9 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
             Log.d(TAG, "autofocus not available");
         }
         if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
-            param.setFlashMode(mFlashMode ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);
+            Log.d("Habilitar flashhh", enableTorch+"");
+
+            param.setFlashMode(enableTorch ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);
         }
 
         mCamera.setParameters(param);
@@ -368,6 +383,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
         if (mImageProcessor != null) {
             mImageProcessor.setBugRotate(mBugRotate);
+            mImageProcessor.setNumOfRectangles(numberOfRectangles);
         }
 
         try {
@@ -614,6 +630,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     private void animateDocument(String filename, ScannedDocument quadrilateral) {
+
+        if(!documentAnimation) return;
 
         OpenNoteCameraView.AnimationRunnable runnable = new OpenNoteCameraView.AnimationRunnable(filename,quadrilateral);
         mActivity.runOnUiThread(runnable);

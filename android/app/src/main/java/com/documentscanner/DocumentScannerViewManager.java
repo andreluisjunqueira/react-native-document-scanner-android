@@ -12,6 +12,7 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
+
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,23 @@ public class DocumentScannerViewManager extends SimpleViewManager<OpenNoteCamera
         reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
     }
 
-    @ReactProp(name="documentAnimation", defaultBoolean = false)
+    @ReactProp(name = "documentAnimation", defaultBoolean = false)
     public void setDocumentAnimation(OpenNoteCameraView view, boolean animate){
         view.setDocumentAnimation(animate);
+    }
+
+//    @ReactProp(name="overlayColor")
+//    public void setOverlayColor(OpenNoteCameraView view, String rgbaColor){
+//
+//    }
+
+    @ReactProp(name = "detectionCountBeforeCapture", defaultInt = 15)
+    public void setDetectionCountBeforeCapture(OpenNoteCameraView view, int numberOfRectangles){
+        view.setDetectionCountBeforeCapture(numberOfRectangles);
+    }
+
+    @ReactProp(name = "enableTorch", defaultBoolean = false)
+    public void setEnableTorch(OpenNoteCameraView view, Boolean enable){
+        view.setEnableTorch(enable);
     }
 }

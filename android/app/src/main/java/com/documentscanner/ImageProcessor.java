@@ -71,6 +71,7 @@ public class ImageProcessor extends Handler {
     private Point[] mPreviewPoints;
     private ResultPoint[] qrResultPoints;
     private int numOfSquares = 0;
+    private int numOfRectangles = 10;
     private Point[] cropPoints;
 
     public ImageProcessor (Looper looper , Handler uiHandler , OpenNoteCameraView mainActivity, Context context) {
@@ -79,6 +80,10 @@ public class ImageProcessor extends Handler {
         this.mMainActivity = mainActivity;
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         mBugRotate = sharedPref.getBoolean("bug_rotate",false);
+    }
+
+    public void setNumOfRectangles(int numOfRectangles){
+        this.numOfRectangles =  numOfRectangles;
     }
 
     public void handleMessage ( Message msg ) {
@@ -141,7 +146,7 @@ public class ImageProcessor extends Handler {
             Log.d("Retangulo capturado", "capturado retangulo !!!!");
             numOfSquares ++;
             Log.d("NUMSQUARES","Numero de retangulos = "+numOfSquares);
-            if(numOfSquares == 10) {
+            if(numOfSquares == numOfRectangles) {
                 mMainActivity.waitSpinnerVisible();
                 mMainActivity.requestPicture();
                 numOfSquares = 0;

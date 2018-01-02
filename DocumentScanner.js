@@ -16,6 +16,8 @@ var iface = {
     name: 'DocumentScanner',
     propTypes: {
       documentAnimation : PropTypes.bool,      
+      detectionCountBeforeCapture : PropTypes.number,      
+      enableTorch : PropTypes.bool,      
       ...View.propTypes // include the default view properties
     },
   };
@@ -25,14 +27,19 @@ const DocumentScanner = requireNativeComponent('DocumentScanner', iface);
 class Scanner extends Component{
 
   componentWillMount(){
-    
-    DeviceEventEmitter.addListener('onPictureTaken',(data)=>{
-      console.log('Dadossss-->',data)
-    })
+    const { onPictureTaken } = this.props;
+    DeviceEventEmitter.addListener('onPictureTaken',onPictureTaken)
+  }
+  componentWillUnmount(){
+    DeviceEventEmitter.removeListener('onPictureTaken');
   }
 
   render(){
-    return<DocumentScanner/>
+    return<DocumentScanner {...this.props} />
   }
+}
+
+Scanner.defaultProps = {
+  onPictureTaken : ()=>{}
 }
 export default Scanner;
