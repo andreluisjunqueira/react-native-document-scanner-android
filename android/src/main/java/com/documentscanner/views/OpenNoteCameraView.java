@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.Size;
-import android.hardware.display.DisplayManager;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
@@ -21,7 +20,6 @@ import android.provider.MediaStore;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
-import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -32,23 +30,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
 import com.documentscanner.BuildConfig;
 import com.documentscanner.ImageProcessor;
-import com.documentscanner.OpenNoteScannerActivity;
 import com.documentscanner.R;
 import com.documentscanner.helpers.CustomOpenCVLoader;
 import com.documentscanner.helpers.OpenNoteMessage;
-import com.documentscanner.helpers.PerspectiveCorrection;
 import com.documentscanner.helpers.PreviewFrame;
 import com.documentscanner.helpers.ScannedDocument;
-import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
-
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.LoaderCallbackInterface;
@@ -59,18 +51,15 @@ import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
 
 import static com.documentscanner.helpers.Utils.addImageToGallery;
 import static com.documentscanner.helpers.Utils.decodeSampledBitmapFromUri;
@@ -544,7 +533,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         } else {
             String folderName=mSharedPref.getString("storage_folder","OpenNoteScanner");
             File folder = new File(Environment.getExternalStorageDirectory().toString()
-                    + "/" + folderName );
+                    + "/");
             if (!folder.exists()) {
                 folder.mkdirs();
                 Log.d(TAG, "wrote: created folder "+folder.getPath());

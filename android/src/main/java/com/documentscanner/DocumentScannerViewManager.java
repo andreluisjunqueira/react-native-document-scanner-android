@@ -1,6 +1,7 @@
 package com.documentscanner;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 
 import com.documentscanner.views.OpenNoteCameraView;
@@ -11,7 +12,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-
+import com.facebook.react.bridge.ReactApplicationContext;
 
 import javax.annotation.Nullable;
 
@@ -22,11 +23,6 @@ import javax.annotation.Nullable;
 public class DocumentScannerViewManager extends SimpleViewManager<OpenNoteCameraView>{
 
     public static final String REACT_CLASS = "DocumentScanner";
-    private Activity mActivity = null;
-
-    public DocumentScannerViewManager(Activity activity){
-        this.mActivity = activity;
-    }
 
     @Override
     public String getName() {
@@ -35,7 +31,7 @@ public class DocumentScannerViewManager extends SimpleViewManager<OpenNoteCamera
 
     @Override
     protected OpenNoteCameraView createViewInstance(final ThemedReactContext reactContext) {
-        OpenNoteCameraView view = new OpenNoteCameraView(reactContext, -1, reactContext.getCurrentActivity());
+        OpenNoteCameraView view = new OpenNoteCameraView(reactContext, -1, (Activity) reactContext.getBaseContext());
         view.setOnScannerListener(new OpenNoteCameraView.OnScannerListener() {
             @Override
             public void onPictureTaken(WritableMap data) {
