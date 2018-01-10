@@ -1,9 +1,9 @@
 package com.documentscanner;
 
 import android.app.Activity;
-import android.content.Context;
 import android.util.Log;
 
+import com.documentscanner.views.MainView;
 import com.documentscanner.views.OpenNoteCameraView;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactContext;
@@ -11,8 +11,9 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
+import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.facebook.react.bridge.ReactApplicationContext;
+
 
 import javax.annotation.Nullable;
 
@@ -20,7 +21,7 @@ import javax.annotation.Nullable;
  * Created by Andre on 29/11/2017.
  */
 
-public class DocumentScannerViewManager extends SimpleViewManager<OpenNoteCameraView>{
+public class DocumentScannerViewManager extends ViewGroupManager<MainView> {
 
     public static final String REACT_CLASS = "DocumentScanner";
 
@@ -30,8 +31,10 @@ public class DocumentScannerViewManager extends SimpleViewManager<OpenNoteCamera
     }
 
     @Override
-    protected OpenNoteCameraView createViewInstance(final ThemedReactContext reactContext) {
-        OpenNoteCameraView view = new OpenNoteCameraView(reactContext, -1, (Activity) reactContext.getBaseContext());
+    protected MainView createViewInstance(final ThemedReactContext reactContext) {
+       //OpenNoteCameraView view = new OpenNoteCameraView(reactContext, -1, reactContext.getCurrentActivity());
+        MainView view = new MainView(reactContext,(Activity) reactContext.getBaseContext());
+
         view.setOnScannerListener(new OpenNoteCameraView.OnScannerListener() {
             @Override
             public void onPictureTaken(WritableMap data) {
@@ -39,6 +42,7 @@ public class DocumentScannerViewManager extends SimpleViewManager<OpenNoteCamera
                 dispatchEvent(reactContext,"onPictureTaken", data);
             }
         });
+
         return view;
     }
 

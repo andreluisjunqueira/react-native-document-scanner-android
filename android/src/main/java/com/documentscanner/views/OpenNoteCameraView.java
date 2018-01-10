@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.Size;
+import android.hardware.display.DisplayManager;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
@@ -20,6 +21,7 @@ import android.provider.MediaStore;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -30,8 +32,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import com.documentscanner.BuildConfig;
 import com.documentscanner.ImageProcessor;
 import com.documentscanner.R;
@@ -39,8 +43,10 @@ import com.documentscanner.helpers.CustomOpenCVLoader;
 import com.documentscanner.helpers.OpenNoteMessage;
 import com.documentscanner.helpers.PreviewFrame;
 import com.documentscanner.helpers.ScannedDocument;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
+
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.LoaderCallbackInterface;
@@ -51,15 +57,18 @@ import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 import static com.documentscanner.helpers.Utils.addImageToGallery;
 import static com.documentscanner.helpers.Utils.decodeSampledBitmapFromUri;
@@ -92,6 +101,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     private Boolean enableTorch = false;
     private String overlayColor = null;
 
+    private View mView = null;
+
 
     public static OpenNoteCameraView mThis;
 
@@ -110,12 +121,17 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         super(context, attrs);
     }
 
-    public OpenNoteCameraView(Context context, Integer numCam, Activity activity) {
+    public OpenNoteCameraView(Context context, Integer numCam, Activity activity, FrameLayout frameLayout) {
         super(context, numCam);
         this.mContext = context;
         this.mActivity = activity;
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         pCallback = this;
+        mView = frameLayout;
+        LayoutInflater lf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //mView = lf.inflate(R.layout.activity_open_note_scanner, null);
+
+        //inflate(context, R.layout.activity_open_note_scanner,null);
 
         initOpenCv(context);
     }
@@ -140,14 +156,14 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         this.enableTorch = enableTorch;
     }
 
-
     public void initOpenCv(Context context){
 
         mThis = this;
 
-        mActivity.setContentView(R.layout.activity_open_note_scanner);
-        mHud = (HUDCanvasView)  mActivity.findViewById(R.id.hud);
-        mWaitSpinner = mActivity.findViewById(R.id.wait_spinner);
+        //mActivity.setContentView(R.layout.activity_open_note_scanner);
+
+        mHud = (HUDCanvasView)  mView.findViewById(R.id.hud);
+        mWaitSpinner = mView.findViewById(R.id.wait_spinner);
         mVisible = true;
 
         mActivity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -155,7 +171,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         Display display = mActivity.getWindowManager().getDefaultDisplay();
         android.graphics.Point size = new android.graphics.Point();
         display.getRealSize(size);
-
 
         BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(context) {
             @Override
@@ -211,8 +226,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
 
     public void turnCameraOn() {
-        mSurfaceView = (SurfaceView) mActivity.findViewById(R.id.surfaceView);
-        mSurfaceHolder = mSurfaceView.getHolder();
+        mSurfaceView = (SurfaceView) mView.findViewById(R.id.surfaceView);
+        mSurfaceHolder = this.getHolder();
         mSurfaceHolder.addCallback(this);
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         mSurfaceView.setVisibility(SurfaceView.VISIBLE);
@@ -533,7 +548,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         } else {
             String folderName=mSharedPref.getString("storage_folder","OpenNoteScanner");
             File folder = new File(Environment.getExternalStorageDirectory().toString()
-                    + "/");
+                    + "/" + folderName );
             if (!folder.exists()) {
                 folder.mkdirs();
                 Log.d(TAG, "wrote: created folder "+folder.getPath());
@@ -620,7 +635,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     private void animateDocument(String filename, ScannedDocument quadrilateral) {
 
-        if(!documentAnimation) return;
+        //if(!documentAnimation) return;
 
         OpenNoteCameraView.AnimationRunnable runnable = new OpenNoteCameraView.AnimationRunnable(filename,quadrilateral);
         mActivity.runOnUiThread(runnable);
@@ -656,7 +671,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
         @Override
         public void run() {
-            final ImageView imageView = (ImageView) mActivity.findViewById(R.id.scannedAnimation);
+            final ImageView imageView = (ImageView) mView.findViewById(R.id.scannedAnimation);
 
             Display display = mActivity.getWindowManager().getDefaultDisplay();
             android.graphics.Point size = new android.graphics.Point();

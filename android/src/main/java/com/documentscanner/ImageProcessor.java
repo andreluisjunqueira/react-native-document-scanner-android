@@ -14,7 +14,6 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.documentscanner.helpers.PerspectiveCorrection;
 import com.documentscanner.views.OpenNoteCameraView;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
@@ -407,7 +406,6 @@ public class ImageProcessor extends Handler {
             // special color threshold algorithm
             colorThresh(src,colorThresh);
         } else if (!colorMode) {
-            //PerspectiveCorrection.correctPerspective(src);
             //Imgproc.cvtColor(src,src, Imgproc.COLOR_RGBA2GRAY); // Descomentar para imagem em grayscale
 //            if (false) {
 //                Imgproc.adaptiveThreshold(src, src, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY, 15, 15);

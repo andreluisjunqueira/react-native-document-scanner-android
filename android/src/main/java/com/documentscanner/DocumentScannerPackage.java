@@ -1,7 +1,6 @@
 package com.documentscanner;
 
 import android.app.Activity;
-import android.content.Context;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.ReactPackage;
@@ -21,6 +20,7 @@ import java.util.List;
 
 public class DocumentScannerPackage implements ReactPackage {
 
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
@@ -37,7 +37,6 @@ public class DocumentScannerPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-
         return Arrays.<ViewManager>asList(
                 new DocumentScannerViewManager()
         );
