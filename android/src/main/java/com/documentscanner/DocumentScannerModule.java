@@ -21,6 +21,7 @@ public class DocumentScannerModule extends ReactContextBaseJavaModule{
         super(reactContext);
     }
 
+
     @Override
     public String getName() {
         return "DocumentScanner";
