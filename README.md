@@ -1,3 +1,7 @@
+##################################################################################
+##WORK IN PROGRESS                         NOT WORKING YET                       #
+##################################################################################
+
 ## React Native module to auto scan documents
 ###### USE manual installation, link is not working fine
 
