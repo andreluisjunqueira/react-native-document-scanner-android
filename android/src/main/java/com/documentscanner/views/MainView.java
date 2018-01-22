@@ -2,7 +2,9 @@ package com.documentscanner.views;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -15,16 +17,18 @@ import com.facebook.react.bridge.WritableMap;
 
 public class MainView extends FrameLayout{
     private OpenNoteCameraView view = null;
+    private FrameLayout frameLayout = null;
 
     public MainView(Context context, Activity activity) {
         super(context);
+
         LayoutInflater lf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        FrameLayout fl = (FrameLayout) lf.inflate(R.layout.activity_open_note_scanner,null);
+        this.frameLayout = (FrameLayout) lf.inflate(R.layout.activity_open_note_scanner,null);
+        //OpenNoteCameraView.createInstance(context, -1, activity, frameLayout);
 
-        view = new OpenNoteCameraView(context, -1, activity, fl);
-
-        addView(view);
-        addView(fl);
+        view = new OpenNoteCameraView(context, -1, activity, frameLayout);
+        addViewInLayout(view,0,new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+        addViewInLayout(frameLayout,1,view.getLayoutParams());
     }
 
     @Override
@@ -33,7 +37,6 @@ public class MainView extends FrameLayout{
             getChildAt(i).layout(l, t, r, b);
         }
     }
-
 
     void setDocumentAnimation(boolean animate){
         view.setDocumentAnimation(animate);

@@ -22,6 +22,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -38,9 +39,11 @@ import android.widget.RelativeLayout;
 
 import com.documentscanner.BuildConfig;
 import com.documentscanner.ImageProcessor;
+import com.documentscanner.OpenNoteScannerActivity;
 import com.documentscanner.R;
 import com.documentscanner.helpers.CustomOpenCVLoader;
 import com.documentscanner.helpers.OpenNoteMessage;
+import com.documentscanner.helpers.PerspectiveCorrection;
 import com.documentscanner.helpers.PreviewFrame;
 import com.documentscanner.helpers.ScannedDocument;
 import com.facebook.react.bridge.Promise;
@@ -101,6 +104,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     private Boolean enableTorch = false;
     private String overlayColor = null;
 
+    private static OpenNoteCameraView instance = null;
+
     private View mView = null;
 
 
@@ -132,15 +137,20 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         //mView = lf.inflate(R.layout.activity_open_note_scanner, null);
 
         //inflate(context, R.layout.activity_open_note_scanner,null);
-
+        this.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        this.setBackgroundColor(0x7f0c0013);
         initOpenCv(context);
     }
 
     public static OpenNoteCameraView getInstance(){
-        return mThis;
-
+        return instance;
     }
 
+    public static void createInstance(Context context, Integer numCam, Activity activity, FrameLayout frameLayout){
+        if(instance == null){
+            instance = new OpenNoteCameraView(context, numCam, activity, frameLayout);
+        }
+    }
 
     public void setDocumentAnimation(boolean animate){
         this.documentAnimation = animate;
@@ -213,7 +223,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         return mHud;
     }
 
-    private boolean imageProcessorBusy=true;
+    private boolean imageProcessorBusy = true;
     private boolean attemptToFocus = false;
 
     public void setImageProcessorBusy(boolean imageProcessorBusy) {
@@ -227,7 +237,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     public void turnCameraOn() {
         mSurfaceView = (SurfaceView) mView.findViewById(R.id.surfaceView);
-        mSurfaceHolder = this.getHolder();
+        mSurfaceHolder = mSurfaceView.getHolder();
         mSurfaceHolder.addCallback(this);
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         mSurfaceView.setVisibility(SurfaceView.VISIBLE);
@@ -323,12 +333,29 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         Camera.Parameters param;
         param = mCamera.getParameters();
 
-        Camera.Size pSize = getMaxPreviewResolution();
-        param.setPreviewSize(pSize.width, pSize.height);
+        /*    TESTE   */
+        Camera.Parameters parameters = mCamera.getParameters();
+        List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
+        Camera.Size previewSize = previewSizes.get(previewSizes.size() - 1); //480h x 720w
 
-        float previewRatio = (float) pSize.width / pSize.height;
+        parameters.setPreviewSize(previewSize.width, previewSize.height);
 
-        Display display = mActivity.getWindowManager().getDefaultDisplay();
+        mCamera.setParameters(parameters);
+        Display display = ((WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+
+        if(display.getRotation() == Surface.ROTATION_0) {
+            mCamera.setDisplayOrientation(90);
+        } else if(display.getRotation() == Surface.ROTATION_270) {
+            mCamera.setDisplayOrientation(180);
+        }
+        /**  Fim teste */
+
+//        Camera.Size pSize = getMaxPreviewResolution();
+//        param.setPreviewSize(pSize.width, pSize.height);
+
+        float previewRatio = (float) previewSize.width / previewSize.height;
+
+        //Display display = mActivity.getWindowManager().getDefaultDisplay();
         //Display display =
         android.graphics.Point size = new android.graphics.Point();
         display.getRealSize(size);
@@ -341,6 +368,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         int previewHeight = displayHeight;
 
         if ( displayRatio > previewRatio ) {
+            Log.e(TAG, "surfaceCreated: ENTROU AQUIII" );
             ViewGroup.LayoutParams surfaceParams = mSurfaceView.getLayoutParams();
             previewHeight = (int) ( (float) size.y/displayRatio*previewRatio);
             surfaceParams.height = previewHeight;
@@ -412,6 +440,22 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+        Camera.Parameters parameters = mCamera.getParameters();
+        List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
+        Camera.Size previewSize = previewSizes.get(4); //480h x 720w
+
+        parameters.setPreviewSize(previewSize.width, previewSize.height);
+
+        mCamera.setParameters(parameters);
+        Display display = ((WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+
+        if(display.getRotation() == Surface.ROTATION_0) {
+            mCamera.setDisplayOrientation(90);
+        } else if(display.getRotation() == Surface.ROTATION_270) {
+            mCamera.setDisplayOrientation(180);
+        }
+
         refreshCamera();
     }
 

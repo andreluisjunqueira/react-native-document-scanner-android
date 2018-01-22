@@ -166,100 +166,100 @@ public class CustomOpenCVLoader extends OpenCVLoader {
                 e.printStackTrace();
             }
 
-            AlertDialog.Builder askInstallOpenCV = new AlertDialog.Builder(AppContext);
+//            AlertDialog.Builder askInstallOpenCV = new AlertDialog.Builder(AppContext);
+//
+//            askInstallOpenCV.setTitle(R.string.install_opencv);
+//            askInstallOpenCV.setMessage(R.string.ask_install_opencv);
+//            askInstallOpenCV.setCancelable(false);
 
-            askInstallOpenCV.setTitle(R.string.install_opencv);
-            askInstallOpenCV.setMessage(R.string.ask_install_opencv);
-            askInstallOpenCV.setCancelable(false);
+//            if (isNonPlayAppAllowed) {
+//                askInstallOpenCV.setNeutralButton(R.string.githubdownload, new DialogInterface.OnClickListener() {
+//
+//                    String arch = Build.SUPPORTED_ABIS[0];
+//
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                        String sAndroidUrl = "https://github.com/ctodobom/opencv/releases/download/3.1.0/OpenCV_3.1.0_Manager_3.10_" + arch + ".apk";
+//
+//                        onComplete = new MyBroadcastReceiver(AppContext);
+//                        AppContext.registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+//
+//                        final DownloadManager dm = (DownloadManager) AppContext.getSystemService(AppContext.DOWNLOAD_SERVICE);
+//                        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(sAndroidUrl));
+//                        String sDest = "file://" + android.os.Environment.getExternalStorageDirectory().toString() + "/Download/OpenCV_3.1.0_Manager_3.10_" + arch + ".apk";
+//                        request.setDestinationUri(Uri.parse(sDest));
+//                        myDownloadReference = dm.enqueue(request);
+//
+//                        dialog.dismiss();
+//
+//                        waitInstallOpenCV = new AlertDialog.Builder(AppContext);
+//
+//                        waitInstallOpenCV.setTitle(R.string.downloading);
+//                        waitInstallOpenCV.setMessage(R.string.downloading_opencv);
+//
+//                        waitInstallOpenCV.setCancelable(false);
+//                        waitInstallOpenCV.setOnCancelListener(new DialogInterface.OnCancelListener() {
+//
+//                            @Override
+//                            public void onCancel(DialogInterface dialog) {
+//                                dm.remove(myDownloadReference);
+//                                AppContext.unregisterReceiver(onComplete);
+//                                dialog.dismiss();
+//                                mAskInstallDialog = null;
+//                            }
+//                        });
+//
+//                        waitInstallOpenCV.setNegativeButton(R.string.answer_cancel, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                dm.remove(myDownloadReference);
+//                                AppContext.unregisterReceiver(onComplete);
+//                                dialog.dismiss();
+//                                mAskInstallDialog = null;
+//                            }
+//                        });
+//
+//                        waitOpenCVDialog = waitInstallOpenCV.create();
+//                        waitOpenCVDialog.show();
+//
+//                    }
+//
+//                });
+//            }
 
-            if (isNonPlayAppAllowed) {
-                askInstallOpenCV.setNeutralButton(R.string.githubdownload, new DialogInterface.OnClickListener() {
-
-                    String arch = Build.SUPPORTED_ABIS[0];
-
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        String sAndroidUrl = "https://github.com/ctodobom/opencv/releases/download/3.1.0/OpenCV_3.1.0_Manager_3.10_" + arch + ".apk";
-
-                        onComplete = new MyBroadcastReceiver(AppContext);
-                        AppContext.registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-
-                        final DownloadManager dm = (DownloadManager) AppContext.getSystemService(AppContext.DOWNLOAD_SERVICE);
-                        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(sAndroidUrl));
-                        String sDest = "file://" + android.os.Environment.getExternalStorageDirectory().toString() + "/Download/OpenCV_3.1.0_Manager_3.10_" + arch + ".apk";
-                        request.setDestinationUri(Uri.parse(sDest));
-                        myDownloadReference = dm.enqueue(request);
-
-                        dialog.dismiss();
-
-                        waitInstallOpenCV = new AlertDialog.Builder(AppContext);
-
-                        waitInstallOpenCV.setTitle(R.string.downloading);
-                        waitInstallOpenCV.setMessage(R.string.downloading_opencv);
-
-                        waitInstallOpenCV.setCancelable(false);
-                        waitInstallOpenCV.setOnCancelListener(new DialogInterface.OnCancelListener() {
-
-                            @Override
-                            public void onCancel(DialogInterface dialog) {
-                                dm.remove(myDownloadReference);
-                                AppContext.unregisterReceiver(onComplete);
-                                dialog.dismiss();
-                                mAskInstallDialog = null;
-                            }
-                        });
-
-                        waitInstallOpenCV.setNegativeButton(R.string.answer_cancel, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dm.remove(myDownloadReference);
-                                AppContext.unregisterReceiver(onComplete);
-                                dialog.dismiss();
-                                mAskInstallDialog = null;
-                            }
-                        });
-
-                        waitOpenCVDialog = waitInstallOpenCV.create();
-                        waitOpenCVDialog.show();
-
-                    }
-
-                });
-            }
-
-            if (isGooglePlayInstalled(AppContext)) {
-                askInstallOpenCV.setPositiveButton(R.string.googleplay, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        AppContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=org.opencv.engine")));
-                    }
-                });
-            }
-
-            if (!isNonPlayAppAllowed && !isGooglePlayInstalled(AppContext)) {
-                askInstallOpenCV.setMessage( AppContext.getString(R.string.ask_install_opencv)
-                        + "\n\n" + AppContext.getString(R.string.messageactivateunknown)
-                );
-
-                askInstallOpenCV.setNeutralButton(R.string.activateunknown , new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        AppContext.startActivity(new Intent(Settings.ACTION_SECURITY_SETTINGS));
-                    }
-                });
-            }
-
-            mAskInstallDialog = askInstallOpenCV.create();
-
-            mAskInstallDialog.show();
-
-        } else {
-            // initialize opencv
-            return OpenCVLoader.initAsync(Version, AppContext, Callback);
+//            if (isGooglePlayInstalled(AppContext)) {
+//                askInstallOpenCV.setPositiveButton(R.string.googleplay, new DialogInterface.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                        AppContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=org.opencv.engine")));
+//                    }
+//                });
+//            }
+//
+//            if (!isNonPlayAppAllowed && !isGooglePlayInstalled(AppContext)) {
+//                askInstallOpenCV.setMessage( AppContext.getString(R.string.ask_install_opencv)
+//                        + "\n\n" + AppContext.getString(R.string.messageactivateunknown)
+//                );
+//
+//                askInstallOpenCV.setNeutralButton(R.string.activateunknown , new DialogInterface.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                        AppContext.startActivity(new Intent(Settings.ACTION_SECURITY_SETTINGS));
+//                    }
+//                });
+//            }
+//
+//            mAskInstallDialog = askInstallOpenCV.create();
+//
+//            mAskInstallDialog.show();
+//
+//        } else {
+//            // initialize opencv
+//            return OpenCVLoader.initAsync(Version, AppContext, Callback);
         }
 
         return false;
