@@ -3,7 +3,6 @@
 ##################################################################################
 
 ## React Native module to auto scan documents
-###### USE manual installation, link is not working fine
 
 1.  In MainApplication.java, add this Line `import com.documentscanner.DocumentScannerPackage;` at the top of file,
 2. after that add this:
@@ -17,14 +16,18 @@
       );
     }
 ```
-3. IMPORTANT - Go to folder app/settings.graddle and add 
-    include ':react-native-documentscanner-android'
-    project(':react-native-documentscanner-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-documentscanner-android/android')
+3. ## IMPORTANT - Go to folder app/settings.gradle and add 
 
-    include ':openCVLibrary310'
-    project(':openCVLibrary310').projectDir = new File(rootProject.projectDir
+include ':react-native-documentscanner-android'
+project(':react-native-documentscanner-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-documentscanner-android/android')
 
-###Usage
+#### Add this
+include ':openCVLibrary310'
+project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
+
+
+
+### Usage
 ```javascript
 import DocumentScanner from 'react-native-documentscanner-android';
 
@@ -46,9 +49,10 @@ class YourComponent extends Component {
 ```
 
 
-#####Params
-| Props  | Params  | type | Description  |
+##### Params
+
+| Props  | Params  | type  | Description  |
 | ------------ | ------------ | ------------ | ------------ |
-| onPictureTaken  | function(data){ console.log(data.path)}  | function  | this function is passed to get the path of captured image  |
-| detectionCountBeforeCapture    | 15  | Int  | number of rectangles detected before to capture the image  |
-| enableTorch   | false | boolean  | Enable or disable torch mode  |
+| onPictureTaken  | function(data){ console.log(data.path)}  | function  | this function is passed to get the path of image |
+| enableTorch  | false  | boolean  | Enable or disable torch mode  |
+| detectionCountBeforeCapture  | 15  | number | number of rectangles detected before to capture the image  |
