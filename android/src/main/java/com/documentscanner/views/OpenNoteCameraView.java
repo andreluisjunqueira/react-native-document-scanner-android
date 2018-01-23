@@ -39,11 +39,9 @@ import android.widget.RelativeLayout;
 
 import com.documentscanner.BuildConfig;
 import com.documentscanner.ImageProcessor;
-import com.documentscanner.OpenNoteScannerActivity;
 import com.documentscanner.R;
 import com.documentscanner.helpers.CustomOpenCVLoader;
 import com.documentscanner.helpers.OpenNoteMessage;
-import com.documentscanner.helpers.PerspectiveCorrection;
 import com.documentscanner.helpers.PreviewFrame;
 import com.documentscanner.helpers.ScannedDocument;
 import com.facebook.react.bridge.Promise;
