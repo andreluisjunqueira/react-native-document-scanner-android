@@ -56,3 +56,5 @@ class YourComponent extends Component {
 | onPictureTaken  | function(data){ console.log(data.path)}  | function  | this function is passed to get the path of image |
 | enableTorch  | false  | boolean  | Enable or disable torch mode  |
 | detectionCountBeforeCapture  | 15  | number | number of rectangles detected before to capture the image  |
+
+### Contributors are welcome !!
