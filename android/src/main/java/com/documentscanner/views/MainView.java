@@ -38,20 +38,23 @@ public class MainView extends FrameLayout{
         }
     }
 
-    void setDocumentAnimation(boolean animate){
+    public void setDocumentAnimation(boolean animate){
         view.setDocumentAnimation(animate);
     }
 
-    void setDetectionCountBeforeCapture(int numberOfRectangles){
+    public void setDetectionCountBeforeCapture(int numberOfRectangles){
         view.setDetectionCountBeforeCapture(numberOfRectangles);
     }
 
-    void setEnableTorch(boolean enable){
+    public void setEnableTorch(boolean enable){
         view.setEnableTorch(enable);
     }
 
     public void setOnScannerListener(OpenNoteCameraView.OnScannerListener listener){
         view.setOnScannerListener(listener);
+    }
+    public void removeOnScannerListener(){
+        view.removeOnScannerListener();
     }
 
 }
