@@ -10,7 +10,9 @@ import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.Size;
 import android.hardware.display.DisplayManager;
+import android.media.AudioManager;
 import android.media.ExifInterface;
+import android.media.MediaActionSound;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
@@ -22,13 +24,13 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
-import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
@@ -102,14 +104,12 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     private Boolean enableTorch = false;
     private String overlayColor = null;
 
-    private static OpenNoteCameraView instance = null;
-
     private View mView = null;
 
 
     public static OpenNoteCameraView mThis;
 
-    private OnScannerListener listener;
+    private OnScannerListener listener = null;
 
     public interface OnScannerListener{
         void onPictureTaken(WritableMap path);
@@ -118,7 +118,10 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     public void setOnScannerListener(OnScannerListener listener){
         this.listener = listener;
     }
+    public void removeOnScannerListener(){
+        this.listener = null;
 
+    }
 
     public OpenNoteCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -135,20 +138,15 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         //mView = lf.inflate(R.layout.activity_open_note_scanner, null);
 
         //inflate(context, R.layout.activity_open_note_scanner,null);
-        this.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
-        this.setBackgroundColor(0x7f0c0013);
+
         initOpenCv(context);
     }
 
     public static OpenNoteCameraView getInstance(){
-        return instance;
+        return mThis;
+
     }
 
-    public static void createInstance(Context context, Integer numCam, Activity activity, FrameLayout frameLayout){
-        if(instance == null){
-            instance = new OpenNoteCameraView(context, numCam, activity, frameLayout);
-        }
-    }
 
     public void setDocumentAnimation(boolean animate){
         this.documentAnimation = animate;
@@ -160,8 +158,14 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         this.numberOfRectangles = numberOfRectangles;
     }
     public void setEnableTorch(boolean enableTorch){
-        Log.d("TORCH", enableTorch+"");
         this.enableTorch = enableTorch;
+
+        if(mCamera != null){
+            Camera.Parameters p = mCamera.getParameters();
+            p.setFlashMode(enableTorch ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);
+            mCamera.setParameters(p);
+        }
+
     }
 
     public void initOpenCv(Context context){
@@ -221,7 +225,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         return mHud;
     }
 
-    private boolean imageProcessorBusy = true;
+    private boolean imageProcessorBusy=true;
     private boolean attemptToFocus = false;
 
     public void setImageProcessorBusy(boolean imageProcessorBusy) {
@@ -235,7 +239,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     public void turnCameraOn() {
         mSurfaceView = (SurfaceView) mView.findViewById(R.id.surfaceView);
-        mSurfaceHolder = mSurfaceView.getHolder();
+        mSurfaceHolder = this.getHolder();
         mSurfaceHolder.addCallback(this);
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         mSurfaceView.setVisibility(SurfaceView.VISIBLE);
@@ -331,29 +335,12 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         Camera.Parameters param;
         param = mCamera.getParameters();
 
-        /*    TESTE   */
-        Camera.Parameters parameters = mCamera.getParameters();
-        List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
-        Camera.Size previewSize = previewSizes.get(previewSizes.size() - 1); //480h x 720w
+        Camera.Size pSize = getMaxPreviewResolution();
+        param.setPreviewSize(pSize.width, pSize.height);
 
-        parameters.setPreviewSize(previewSize.width, previewSize.height);
+        float previewRatio = (float) pSize.width / pSize.height;
 
-        mCamera.setParameters(parameters);
-        Display display = ((WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-
-        if(display.getRotation() == Surface.ROTATION_0) {
-            mCamera.setDisplayOrientation(90);
-        } else if(display.getRotation() == Surface.ROTATION_270) {
-            mCamera.setDisplayOrientation(180);
-        }
-        /**  Fim teste */
-
-//        Camera.Size pSize = getMaxPreviewResolution();
-//        param.setPreviewSize(pSize.width, pSize.height);
-
-        float previewRatio = (float) previewSize.width / previewSize.height;
-
-        //Display display = mActivity.getWindowManager().getDefaultDisplay();
+        Display display = mActivity.getWindowManager().getDefaultDisplay();
         //Display display =
         android.graphics.Point size = new android.graphics.Point();
         display.getRealSize(size);
@@ -366,7 +353,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         int previewHeight = displayHeight;
 
         if ( displayRatio > previewRatio ) {
-            Log.e(TAG, "surfaceCreated: ENTROU AQUIII" );
             ViewGroup.LayoutParams surfaceParams = mSurfaceView.getLayoutParams();
             previewHeight = (int) ( (float) size.y/displayRatio*previewRatio);
             surfaceParams.height = previewHeight;
@@ -438,22 +424,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
-        Camera.Parameters parameters = mCamera.getParameters();
-        List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
-        Camera.Size previewSize = previewSizes.get(4); //480h x 720w
-
-        parameters.setPreviewSize(previewSize.width, previewSize.height);
-
-        mCamera.setParameters(parameters);
-        Display display = ((WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-
-        if(display.getRotation() == Surface.ROTATION_0) {
-            mCamera.setDisplayOrientation(90);
-        } else if(display.getRotation() == Surface.ROTATION_270) {
-            mCamera.setDisplayOrientation(180);
-        }
-
         refreshCamera();
     }
 
@@ -524,10 +494,27 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         mImageProcessor.sendMessage(msg);
     }
 
+    public void blinkScreenAndShutterSound(){
+        AudioManager audio = (AudioManager) mActivity.getSystemService(Context.AUDIO_SERVICE);
+        switch( audio.getRingerMode() ){
+            case AudioManager.RINGER_MODE_NORMAL:
+                MediaActionSound sound = new MediaActionSound();
+                sound.play(MediaActionSound.SHUTTER_CLICK);
+                break;
+            case AudioManager.RINGER_MODE_SILENT:
+                break;
+            case AudioManager.RINGER_MODE_VIBRATE:
+                break;
+        }
+    }
+
     public void waitSpinnerVisible() {
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                // Animation animation = new AlphaAnimation(0.0f, 1.0f);
+                // animation.setDuration(300);
+                // mView.startAnimation(animation);
                 mWaitSpinner.setVisibility(View.VISIBLE);
             }
         });
@@ -588,7 +575,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
             }
             isIntent = true;
         } else {
-            String folderName=mSharedPref.getString("storage_folder","OpenNoteScanner");
+            String folderName="documents";
             File folder = new File(Environment.getExternalStorageDirectory().toString()
                     + "/" + folderName );
             if (!folder.exists()) {
@@ -614,18 +601,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         if(this.listener != null){
             data.putString("path",fileName);
             this.listener.onPictureTaken(data);
-        }
-        Log.d("IMAGE TAKEN","Image path"+fileName);
-        try {
-            ExifInterface exif = new ExifInterface(fileName);
-            exif.setAttribute("UserComment", "Generated using Open Note Scanner");
-            String nowFormatted = mDateFormat.format(new Date().getTime());
-            exif.setAttribute(ExifInterface.TAG_DATETIME,nowFormatted);
-            exif.setAttribute(ExifInterface.TAG_DATETIME_DIGITIZED , nowFormatted);
-            exif.setAttribute("Software" , "OpenNoteScanner " + BuildConfig.VERSION_NAME + " https://goo.gl/2JwEPq");
-            exif.saveAttributes();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
         if (isIntent) {
