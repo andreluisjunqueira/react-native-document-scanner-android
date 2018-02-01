@@ -63,7 +63,7 @@ public class ImageProcessor extends Handler {
     private boolean mBugRotate;
     private boolean colorMode=false;
     private boolean filterMode=true;
-    private double colorGain = 2.5;       // contrast
+    private double colorGain = 1.75;       // contrast
     private double colorBias = 0;         // bright
     private int colorThresh = 110;        // threshold
     private Size mPreviewSize;
@@ -71,7 +71,6 @@ public class ImageProcessor extends Handler {
     private ResultPoint[] qrResultPoints;
     private int numOfSquares = 0;
     private int numOfRectangles = 10;
-    private Point[] cropPoints;
 
     public ImageProcessor (Looper looper , Handler uiHandler , OpenNoteCameraView mainActivity, Context context) {
         super(looper);
@@ -140,12 +139,12 @@ public class ImageProcessor extends Handler {
         boolean previewOnly = previewFrame.isPreviewOnly();
 
         if ( detectPreviewDocument(frame) /*&& ( (!autoMode && !previewOnly ) || ( autoMode && qrOk ) )*/ ) {//---------------------------Comentarrrr
-            cropPoints = mPreviewPoints;
 
             Log.d("Retangulo capturado", "capturado retangulo !!!!");
             numOfSquares ++;
             Log.d("NUMSQUARES","Numero de retangulos = "+numOfSquares);
             if(numOfSquares == numOfRectangles) {
+                mMainActivity.blinkScreenAndShutterSound();
                 mMainActivity.waitSpinnerVisible();
                 mMainActivity.requestPicture();
                 numOfSquares = 0;
@@ -162,7 +161,6 @@ public class ImageProcessor extends Handler {
 
     public void processPicture( Mat picture ) {
 
-       // Mat croped = cropDocument(picture, cropPoints);
         Mat img = Imgcodecs.imdecode(picture, Imgcodecs.CV_LOAD_IMAGE_UNCHANGED);
         picture.release();
 
@@ -176,7 +174,6 @@ public class ImageProcessor extends Handler {
         ScannedDocument doc = detectDocument(img);
 
         mMainActivity.saveDocument(doc);
-        cropPoints = null;
         doc.release();
         picture.release();
 
@@ -406,10 +403,7 @@ public class ImageProcessor extends Handler {
             // special color threshold algorithm
             colorThresh(src,colorThresh);
         } else if (!colorMode) {
-            //Imgproc.cvtColor(src,src, Imgproc.COLOR_RGBA2GRAY); // Descomentar para imagem em grayscale
-//            if (false) {
-//                Imgproc.adaptiveThreshold(src, src, 255, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY, 15, 15);
-//            }
+            src.convertTo(src,-1, colorGain , colorBias);
         }
     }
 
