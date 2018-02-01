@@ -26,12 +26,18 @@ const DocumentScanner = requireNativeComponent('DocumentScanner', iface);
 
 class Scanner extends Component{
 
+  state = {
+    onPictureTaken : null
+  }
+
   componentWillMount(){
     const { onPictureTaken } = this.props;
     DeviceEventEmitter.addListener('onPictureTaken',onPictureTaken)
+    this.setState({onPictureTaken});
   }
+  
   componentWillUnmount(){
-    DeviceEventEmitter.removeListener('onPictureTaken');
+    DeviceEventEmitter.removeListener('onPictureTaken',this.state.onPictureTaken);
   }
 
   render(){
