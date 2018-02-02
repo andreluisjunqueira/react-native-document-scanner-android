@@ -530,22 +530,27 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     public boolean requestPicture() {
+        PackageManager pm = mActivity.getPackageManager();
         if (safeToTakePicture) {
-            //runOnUiThread(resetShutterColor);
-            safeToTakePicture = false;
-            try{
-                mCamera.autoFocus(new Camera.AutoFocusCallback() {
-                    @Override
-                    public void onAutoFocus(boolean success, Camera camera) {
-                        if (attemptToFocus) {
-                            return;
-                        } else {
-                            attemptToFocus = true;
-                        }
 
-                        camera.takePicture(null, null, pCallback);
-                    }
-                });
+            safeToTakePicture = false;
+            
+            try{
+                if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
+                    mCamera.autoFocus(new Camera.AutoFocusCallback() {
+                        @Override
+                        public void onAutoFocus(boolean success, Camera camera) {
+                            if (attemptToFocus) {
+                                return;
+                            } else {
+                                attemptToFocus = true;
+                            }
+                            mCamera.takePicture(null, null, pCallback);
+                        }
+                    });
+                }else{
+                    mCamera.takePicture(null, null, pCallback);
+                }
             }catch(Exception e){
                 this.waitSpinnerInvisible();
             }
