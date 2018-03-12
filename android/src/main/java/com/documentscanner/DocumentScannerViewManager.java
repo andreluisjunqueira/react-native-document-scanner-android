@@ -51,7 +51,7 @@ public class DocumentScannerViewManager extends ViewGroupManager<MainView> {
     }
 
     @ReactProp(name = "documentAnimation", defaultBoolean = false)
-    public void setDocumentAnimation(OpenNoteCameraView view, boolean animate){
+    public void setDocumentAnimation(MainView view, boolean animate){
         view.setDocumentAnimation(animate);
     }
 
@@ -61,12 +61,12 @@ public class DocumentScannerViewManager extends ViewGroupManager<MainView> {
 //    }
 
     @ReactProp(name = "detectionCountBeforeCapture", defaultInt = 15)
-    public void setDetectionCountBeforeCapture(OpenNoteCameraView view, int numberOfRectangles){
+    public void setDetectionCountBeforeCapture(MainView view, int numberOfRectangles){
         view.setDetectionCountBeforeCapture(numberOfRectangles);
     }
 
     @ReactProp(name = "enableTorch", defaultBoolean = false)
-    public void setEnableTorch(OpenNoteCameraView view, Boolean enable){
+    public void setEnableTorch(MainView view, Boolean enable){
         view.setEnableTorch(enable);
     }
 }
