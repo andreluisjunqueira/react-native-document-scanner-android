@@ -172,7 +172,9 @@ public class ImageProcessor extends Handler {
         }
 
         ScannedDocument doc = detectDocument(img);
-
+        
+        mMainActivity.getHUD().clear();
+        mMainActivity.invalidateHUD();
         mMainActivity.saveDocument(doc);
         doc.release();
         picture.release();
@@ -180,6 +182,7 @@ public class ImageProcessor extends Handler {
         mMainActivity.setImageProcessorBusy(false);
         mMainActivity.setAttemptToFocus(false);
         mMainActivity.waitSpinnerInvisible();
+
     }
 
 
@@ -286,10 +289,10 @@ public class ImageProcessor extends Handler {
         PathShape newBox = new PathShape(path , previewWidth , previewHeight);
 
         Paint paint = new Paint();
-        paint.setColor(Color.argb(64, 66, 165, 245));
+        paint.setColor(Color.argb(180, 66, 165, 245));
 
         Paint border = new Paint();
-        border.setColor(Color.rgb(0, 0, 255));
+        border.setColor(Color.rgb(66, 165, 245));
         border.setStrokeWidth(5);
 
         hud.clear();
