@@ -112,17 +112,30 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     public static OpenNoteCameraView mThis;
 
     private OnScannerListener listener = null;
+    private OnProcessingListener processingListener = null;
 
     public interface OnScannerListener{
         void onPictureTaken(WritableMap path);
     }
 
+    public interface OnProcessingListener{
+        void onProcessingChange(WritableMap path);
+    }
+
     public void setOnScannerListener(OnScannerListener listener){
         this.listener = listener;
     }
+
     public void removeOnScannerListener(){
         this.listener = null;
+    }
 
+    public void setOnProcessingListener(OnProcessingListener processingListener){
+        this.processingListener = processingListener;
+    }
+
+    public void removeOnProcessingListener(){
+        this.processingListener = null;
     }
 
     public OpenNoteCameraView(Context context, AttributeSet attrs) {
@@ -147,9 +160,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     public static OpenNoteCameraView getInstance(){
         return mThis;
-
     }
-
 
     public void setDocumentAnimation(boolean animate){
         this.documentAnimation = animate;
@@ -517,17 +528,17 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     public void waitSpinnerVisible() {
+
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                // Animation animation = new AlphaAnimation(0.0f, 1.0f);
-                // animation.setDuration(300);
-                // mView.startAnimation(animation);
                 blinkView.bringToFront();
                 Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.blink);
                 blinkView.startAnimation(animation);
-
                 mWaitSpinner.setVisibility(View.VISIBLE);
+                WritableMap data = new WritableNativeMap();
+                data.putBoolean("processing", true);
+                mThis.processingListener.onProcessingChange(data);
             }
         });
     }
@@ -538,6 +549,9 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
             public void run() {
                 blinkView.setVisibility(View.INVISIBLE);
                 mWaitSpinner.setVisibility(View.INVISIBLE);
+                WritableMap data = new WritableNativeMap();
+                data.putBoolean("processing", false);
+                mThis.processingListener.onProcessingChange(data);
             }
         });
     }
