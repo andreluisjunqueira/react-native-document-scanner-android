@@ -1,6 +1,6 @@
-##################################################################################
-##WORK IN PROGRESS                         NOT WORKING YET                       #
-##################################################################################
+###########################################################################
+#### WORK IN PROGRESS    --- NOT WORKING TOTTALY FINE YET                    #
+###########################################################################
 
 ## React Native module to auto scan documents
 
@@ -16,13 +16,13 @@
       );
     }
 ```
-3. ## IMPORTANT - Go to folder app/settings.gradle and add 
+3. #### IMPORTANT - Go to folder app/settings.gradle and add 
 
-include ':react-native-documentscanner-android'
+>include ':react-native-documentscanner-android'
 project(':react-native-documentscanner-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-documentscanner-android/android')
 
 #### Add this
-include ':openCVLibrary310'
+>include ':openCVLibrary310'
 project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
 
 
