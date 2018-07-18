@@ -1,13 +1,45 @@
 {
-  "name": "react-native-documentscanner-android",
-  "version": "0.1.8",
-  "description": "React Native Module to auto detect documents",
-  "main": "DocumentScanner.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+git@github.com:andreluisjunqueira/react-native-documentscanner-android.git"
+  "_from": "react-native-documentscanner-android@^0.1.4",
+  "_id": "react-native-documentscanner-android@0.1.9",
+  "_inBundle": false,
+  "_integrity": "sha512-Lumit31kEACSZTSDA7GkLxMY6C8IutmQJHelvWwM5mibC1k18Rny9PjefIu/x0mGMgb8X/JxxbKeJ3pX1XMmyg==",
+  "_location": "/react-native-documentscanner-android",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "react-native-documentscanner-android@^0.1.4",
+    "name": "react-native-documentscanner-android",
+    "escapedName": "react-native-documentscanner-android",
+    "rawSpec": "^0.1.4",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.4"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-documentscanner-android/-/react-native-documentscanner-android-0.1.9.tgz",
+  "_shasum": "f6688b1bbe734aa2f18b28ba577785d6ace1c13f",
+  "_spec": "react-native-documentscanner-android@^0.1.4",
+  "_where": "/Users/guilhermedias/Documents/mobile/PJBank",
+  "author": {
+    "name": "Andre Junqueira"
+  },
+  "bugs": {
+    "url": "https://github.com/andreluisjunqueira/react-native-documentscanner-android/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  },
+  "deprecated": false,
+  "description": "React Native Module to auto detect documents",
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.7.1",
+    "eslint-config-tipsi": "^12.0.0"
+  },
+  "homepage": "https://github.com/andreluisjunqueira/react-native-documentscanner-android",
   "keywords": [
     "react",
     "react-native",
@@ -15,18 +47,13 @@
     "scanner",
     "document"
   ],
-  "author": "Andre Junqueira",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andreluisjunqueira/react-native-documentscanner-android/issues"
+  "main": "DocumentScanner.js",
+  "name": "react-native-documentscanner-android",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andreluisjunqueira/react-native-documentscanner-android.git"
   },
-  "homepage": "https://github.com/andreluisjunqueira/react-native-documentscanner-android",
-  "dependencies": {
-    "prop-types": "^15.6.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint": "^3.7.1",
-    "eslint-config-tipsi": "^12.0.0"
-  }
+  "scripts": {},
+  "version": "0.1.10"
 }

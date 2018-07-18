@@ -35,6 +35,14 @@ public class DocumentScannerViewManager extends ViewGroupManager<MainView> {
        //OpenNoteCameraView view = new OpenNoteCameraView(reactContext, -1, reactContext.getCurrentActivity());
         MainView view = new MainView(reactContext,(Activity) reactContext.getBaseContext());
 
+        view.setOnProcessingListener(new OpenNoteCameraView.OnProcessingListener() {
+            @Override
+            public void onProcessingChange(WritableMap data) {
+                Log.d("LISTENER", "O Listener--->"+data);
+                dispatchEvent(reactContext, "onProcessingChange", data);
+            }
+        });
+
         view.setOnScannerListener(new OpenNoteCameraView.OnScannerListener() {
             @Override
             public void onPictureTaken(WritableMap data) {
@@ -42,7 +50,7 @@ public class DocumentScannerViewManager extends ViewGroupManager<MainView> {
                 dispatchEvent(reactContext,"onPictureTaken", data);
             }
         });
-
+        
         return view;
     }
 

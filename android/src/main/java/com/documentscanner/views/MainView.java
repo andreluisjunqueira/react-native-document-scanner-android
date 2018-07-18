@@ -57,4 +57,11 @@ public class MainView extends FrameLayout{
         view.removeOnScannerListener();
     }
 
+    public void setOnProcessingListener(OpenNoteCameraView.OnProcessingListener listener){
+        view.setOnProcessingListener(listener);
+    }
+    public void removeOnProcessingListener(){
+        view.removeOnProcessingListener();
+    }
+
 }

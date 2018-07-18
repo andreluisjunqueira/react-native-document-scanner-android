@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.Size;
@@ -32,6 +33,7 @@ import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
@@ -103,24 +105,37 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     private int numberOfRectangles = 15;
     private Boolean enableTorch = false;
     private String overlayColor = null;
-
+    private View blinkView = null;
     private View mView = null;
 
 
     public static OpenNoteCameraView mThis;
 
     private OnScannerListener listener = null;
+    private OnProcessingListener processingListener = null;
 
     public interface OnScannerListener{
         void onPictureTaken(WritableMap path);
     }
 
+    public interface OnProcessingListener{
+        void onProcessingChange(WritableMap path);
+    }
+
     public void setOnScannerListener(OnScannerListener listener){
         this.listener = listener;
     }
+
     public void removeOnScannerListener(){
         this.listener = null;
+    }
 
+    public void setOnProcessingListener(OnProcessingListener processingListener){
+        this.processingListener = processingListener;
+    }
+
+    public void removeOnProcessingListener(){
+        this.processingListener = null;
     }
 
     public OpenNoteCameraView(Context context, AttributeSet attrs) {
@@ -134,6 +149,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         pCallback = this;
         mView = frameLayout;
+        
         LayoutInflater lf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //mView = lf.inflate(R.layout.activity_open_note_scanner, null);
 
@@ -144,9 +160,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     public static OpenNoteCameraView getInstance(){
         return mThis;
-
     }
-
 
     public void setDocumentAnimation(boolean animate){
         this.documentAnimation = animate;
@@ -176,6 +190,9 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
         mHud = (HUDCanvasView)  mView.findViewById(R.id.hud);
         mWaitSpinner = mView.findViewById(R.id.wait_spinner);
+        blinkView = mView.findViewById(R.id.blink_view);
+        blinkView.setBackgroundColor(Color.WHITE);
+        
         mVisible = true;
 
         mActivity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -428,6 +445,8 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     private void refreshCamera() {
+        final boolean torchEnabled = this.enableTorch;
+
         try {
             mCamera.stopPreview();
         }
@@ -437,7 +456,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
         try {
             mCamera.setPreviewDisplay(mSurfaceHolder);
-
+            mThis.setEnableTorch(torchEnabled);
             mCamera.startPreview();
             mCamera.setPreviewCallback(this);
         }
@@ -509,13 +528,17 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     public void waitSpinnerVisible() {
+
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                // Animation animation = new AlphaAnimation(0.0f, 1.0f);
-                // animation.setDuration(300);
-                // mView.startAnimation(animation);
+                blinkView.bringToFront();
+                Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.blink);
+                blinkView.startAnimation(animation);
                 mWaitSpinner.setVisibility(View.VISIBLE);
+                WritableMap data = new WritableNativeMap();
+                data.putBoolean("processing", true);
+                mThis.processingListener.onProcessingChange(data);
             }
         });
     }
@@ -524,7 +547,11 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                mWaitSpinner.setVisibility(View.GONE);
+                blinkView.setVisibility(View.INVISIBLE);
+                mWaitSpinner.setVisibility(View.INVISIBLE);
+                WritableMap data = new WritableNativeMap();
+                data.putBoolean("processing", false);
+                mThis.processingListener.onProcessingChange(data);
             }
         });
     }

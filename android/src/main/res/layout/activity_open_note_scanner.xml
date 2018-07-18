@@ -86,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:visibility="gone">
+        android:visibility="invisible">
 
         <ProgressBar
             android:layout_width="wrap_content"
@@ -95,13 +95,10 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right">
-
-
-    </LinearLayout>
+    <View
+        android:id="@+id/blink_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
 
 </FrameLayout>
