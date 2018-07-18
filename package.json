@@ -55,5 +55,5 @@
     "url": "git+ssh://git@github.com/andreluisjunqueira/react-native-documentscanner-android.git"
   },
   "scripts": {},
-  "version": "0.1.10"
+  "version": "0.1.11"
 }
