@@ -44,6 +44,7 @@ import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
+import org.opencv.calib3d.Calib3d;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -63,9 +64,9 @@ public class ImageProcessor extends Handler {
     private boolean mBugRotate;
     private boolean colorMode=false;
     private boolean filterMode=true;
-    private double colorGain = 1.75;       // contrast
-    private double colorBias = 0;         // bright
-    private int colorThresh = 110;        // threshold
+    private double colorGain = 1;       // contrast
+    private double colorBias = 10;         // bright
+    private int colorThresh = 115;        // threshold
     private Size mPreviewSize;
     private Point[] mPreviewPoints;
     private ResultPoint[] qrResultPoints;
@@ -137,19 +138,16 @@ public class ImageProcessor extends Handler {
 
         boolean autoMode = previewFrame.isAutoMode();
         boolean previewOnly = previewFrame.isPreviewOnly();
+        boolean focused = mMainActivity.isFocused();
 
-        if ( detectPreviewDocument(frame) /*&& ( (!autoMode && !previewOnly ) || ( autoMode && qrOk ) )*/ ) {//---------------------------Comentarrrr
-
-            Log.d("Retangulo capturado", "capturado retangulo !!!!");
+        if ( detectPreviewDocument(frame) && focused ) {
             numOfSquares ++;
-            Log.d("NUMSQUARES","Numero de retangulos = "+numOfSquares);
             if(numOfSquares == numOfRectangles) {
                 mMainActivity.blinkScreenAndShutterSound();
                 mMainActivity.waitSpinnerVisible();
                 mMainActivity.requestPicture();
                 numOfSquares = 0;
             }
-
         }else{
             numOfSquares = 0;
         }
@@ -387,27 +385,8 @@ public class ImageProcessor extends Handler {
     }
 
     private void enhanceDocument( Mat src ) {
-        if (/*colorMode && filterMode*/false) {
-            src.convertTo(src,-1, colorGain , colorBias);
-            Mat mask = new Mat(src.size(), CvType.CV_8UC1);
-            Imgproc.cvtColor(src,mask, Imgproc.COLOR_RGBA2GRAY);
-
-            Mat copy = new Mat(src.size(), CvType.CV_8UC3);
-            src.copyTo(copy);
-
-            Imgproc.adaptiveThreshold(mask,mask,255, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY_INV,15,15);
-
-            src.setTo(new Scalar(255,255,255));
-            copy.copyTo(src,mask);
-
-            copy.release();
-            mask.release();
-
-            // special color threshold algorithm
-            colorThresh(src,colorThresh);
-        } else if (!colorMode) {
-            src.convertTo(src,-1, colorGain , colorBias);
-        }
+        Imgproc.cvtColor(src,src, Imgproc.COLOR_RGBA2GRAY);
+        src.convertTo(src,CvType.CV_8UC1, colorGain , colorBias);
     }
 
 
@@ -516,7 +495,7 @@ public class ImageProcessor extends Handler {
         ArrayList<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Mat hierarchy = new Mat();
 
-        Imgproc.findContours(cannedImage, contours, hierarchy, Imgproc.RETR_LIST, Imgproc.CHAIN_APPROX_SIMPLE);
+        Imgproc.findContours(cannedImage, contours, hierarchy, Imgproc.RETR_LIST, Imgproc.CHAIN_APPROX_NONE);
 
         hierarchy.release();
 
