@@ -253,6 +253,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         this.attemptToFocus = attemptToFocus;
     }
 
+    public boolean isFocused() { return this.mFocused; }
 
     public void turnCameraOn() {
         mSurfaceView = (SurfaceView) mView.findViewById(R.id.surfaceView);
@@ -343,7 +344,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
             int cameraId = findBestCamera();
             mCamera = Camera.open(cameraId);
         }
-
         catch (RuntimeException e) {
             System.err.println(e);
             return;
@@ -354,7 +354,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
         Camera.Size pSize = getMaxPreviewResolution();
         param.setPreviewSize(pSize.width, pSize.height);
-
+        param.setWhiteBalance(Camera.Parameters.WHITE_BALANCE_AUTO);
         float previewRatio = (float) pSize.width / pSize.height;
 
         Display display = mActivity.getWindowManager().getDefaultDisplay();
@@ -389,18 +389,13 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         }
 
         PackageManager pm = mActivity.getPackageManager();
-        Log.d("AQUII", enableTorch+"");
 
         if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)) {
             param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
-            Log.d(TAG, "enabling autofocus");
         } else {
             mFocused = true;
-            Log.d(TAG, "autofocus not available");
         }
         if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
-            Log.d("Habilitar flashhh", enableTorch+"");
-
             param.setFlashMode(enableTorch ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);
         }
 
@@ -478,9 +473,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     public void onPreviewFrame(byte[] data, Camera camera) {
 
         Camera.Size pictureSize = camera.getParameters().getPreviewSize();
-
-        Log.d(TAG, "onPreviewFrame - received image " + pictureSize.width + "x" + pictureSize.height
-                + " focused: "+ mFocused +" imageprocessor: "+(imageProcessorBusy?"busy":"available"));
 
         if ( mFocused && ! imageProcessorBusy ) {
             setImageProcessorBusy(true);
@@ -562,25 +554,18 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
             safeToTakePicture = false;
             try{
-                if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
-                    mCamera.takePicture(null, null, pCallback);
-                    //AutoFocus callback is not working, for this reason was commented --- Fix in the future
-//                    mCamera.autoFocus(new Camera.AutoFocusCallback() {
-//                        @Override
-//                        public void onAutoFocus(boolean success, Camera camera) {
-//                            Log.d("TAKE_PICTURE","takePicture: 0.2");
-//                            if (attemptToFocus) {
-//                                return;
-//                            } else {
-//                                attemptToFocus = true;
-//                            }
-//                            mCamera.takePicture(null, null, pCallback);
-//                            Log.d("TAKE_PICTURE","takePicture: 1");
-//                        }
-//                    });
-                }else{
-                    mCamera.takePicture(null, null, pCallback);
-                }
+                mCamera.autoFocus(new Camera.AutoFocusCallback() {
+                    @Override
+                    public void onAutoFocus(boolean success, Camera camera) {
+                        if (attemptToFocus) {
+                            return;
+                        } else {
+                            attemptToFocus = true;
+                        }
+                        Log.d("FOCUSSSSSS", "Focus success -->"+success);
+                        mCamera.takePicture(null,null,pCallback);
+                    }
+                });
             }catch(Exception e){
                 this.waitSpinnerInvisible();
             }
