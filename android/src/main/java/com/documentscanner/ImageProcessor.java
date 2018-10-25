@@ -85,6 +85,14 @@ public class ImageProcessor extends Handler {
         this.numOfRectangles =  numOfRectangles;
     }
 
+    public void setBrightness(double brightness){
+        this.colorBias =  brightness;
+    }
+
+    public void setContrast(double contrast){
+        this.colorGain =  contrast;
+    }
+
     public void handleMessage ( Message msg ) {
 
         if (msg.obj.getClass() == OpenNoteMessage.class) {
@@ -253,8 +261,6 @@ public class ImageProcessor extends Handler {
             mPreviewPoints = rescaledPoints;
 
             drawDocumentBox(mPreviewPoints, mPreviewSize);
-
-            Log.d(TAG, quad.points[0].toString() + " , " + quad.points[1].toString() + " , " + quad.points[2].toString() + " , " + quad.points[3].toString());
 
             return true;
 
@@ -490,12 +496,12 @@ public class ImageProcessor extends Handler {
         Imgproc.resize(src,resizedImage,size);
         Imgproc.cvtColor(resizedImage, grayImage, Imgproc.COLOR_RGBA2GRAY, 4);
         Imgproc.GaussianBlur(grayImage, grayImage, new Size(5, 5), 0);
-        Imgproc.Canny(grayImage, cannedImage, 75, 200);
+        Imgproc.Canny(grayImage, cannedImage, 80, 100, 3, false);
 
         ArrayList<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Mat hierarchy = new Mat();
 
-        Imgproc.findContours(cannedImage, contours, hierarchy, Imgproc.RETR_LIST, Imgproc.CHAIN_APPROX_NONE);
+        Imgproc.findContours(cannedImage, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
 
         hierarchy.release();
 
@@ -503,7 +509,7 @@ public class ImageProcessor extends Handler {
 
             @Override
             public int compare(MatOfPoint lhs, MatOfPoint rhs) {
-                return Double.valueOf(Imgproc.contourArea(rhs)).compareTo(Imgproc.contourArea(lhs));
+            return Double.valueOf(Imgproc.contourArea(rhs)).compareTo(Imgproc.contourArea(lhs));
             }
         });
 

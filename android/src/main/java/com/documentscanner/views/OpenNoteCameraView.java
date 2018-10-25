@@ -107,7 +107,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     private String overlayColor = null;
     private View blinkView = null;
     private View mView = null;
-
+    private boolean manualCapture = false;
 
     public static OpenNoteCameraView mThis;
 
@@ -151,9 +151,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         mView = frameLayout;
         
         LayoutInflater lf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //mView = lf.inflate(R.layout.activity_open_note_scanner, null);
-
-        //inflate(context, R.layout.activity_open_note_scanner,null);
 
         initOpenCv(context);
     }
@@ -179,14 +176,31 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
             p.setFlashMode(enableTorch ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);
             mCamera.setParameters(p);
         }
+    }
 
+    public void capture(){
+        this.requestManualPicture();
+    }
+
+    public void setManualOnly( boolean manualOnly){
+        this.manualCapture = manualOnly;
+    }
+
+    public void setBrightness( double brightness ){
+        if (mImageProcessor != null) {
+            mImageProcessor.setBrightness(numberOfRectangles);
+        }
+    }
+
+    public void setContrast( double contrast){
+        if (mImageProcessor != null) {
+            mImageProcessor.setContrast(numberOfRectangles);
+        }
     }
 
     public void initOpenCv(Context context){
 
         mThis = this;
-
-        //mActivity.setContentView(R.layout.activity_open_note_scanner);
 
         mHud = (HUDCanvasView)  mView.findViewById(R.id.hud);
         mWaitSpinner = mView.findViewById(R.id.wait_spinner);
@@ -484,7 +498,10 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
             yuv.release();
 
-            sendImageProcessorMessage("previewFrame", new PreviewFrame( mat, autoMode, !(autoMode) ));
+            if(!manualCapture){
+                sendImageProcessorMessage("previewFrame", new PreviewFrame( mat, autoMode, !(autoMode) ));
+            }
+
         }
 
     }
@@ -548,12 +565,31 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         });
     }
 
+    public boolean requestManualPicture(){
+        this.blinkScreenAndShutterSound();
+        this.waitSpinnerVisible();
+
+        if(safeToTakePicture){
+
+            safeToTakePicture = false;
+
+            try{
+                mCamera.takePicture(null,null, pCallback);
+            }catch(Exception e){
+                this.waitSpinnerInvisible();
+            }
+            return true;
+        }
+        return false;
+    }
+
     public boolean requestPicture() {
         PackageManager pm = mActivity.getPackageManager();
         if (safeToTakePicture) {
 
             safeToTakePicture = false;
             try{
+                //                if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
                 mCamera.autoFocus(new Camera.AutoFocusCallback() {
                     @Override
                     public void onAutoFocus(boolean success, Camera camera) {
@@ -904,19 +940,15 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     public void takePicture(final String fileName) {
-        Log.i(TAG, "Taking picture");
         this.mPictureFileName = fileName;
         // Postview and jpeg are sent in the same buffers if the queue is not empty when performing a capture.
         // Clear up buffers to avoid mCamera.takePicture to be stuck because of a memory issue
         mCamera.setPreviewCallback(null);
-
         // PictureCallback is implemented by the current class
         mCamera.takePicture(null, null, this);
     }
 
     public void takePicture(PictureCallback callback) {
-        Log.i(TAG, "Taking picture");
-
         mCamera.takePicture(null, null, callback);
 
     }
@@ -924,11 +956,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
 
-        //shootSound();
-
         Camera.Size pictureSize = camera.getParameters().getPictureSize();
-
-        Log.d(TAG, "onPictureTaken - received image " + pictureSize.width + "x" + pictureSize.height);
 
         Mat mat = new Mat(new org.opencv.core.Size(pictureSize.width, pictureSize.height), CvType.CV_8U);
         mat.put(0, 0, data);
@@ -936,7 +964,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         setImageProcessorBusy(true);
         sendImageProcessorMessage("pictureTaken", mat);
 
-        //scanClicked = false;
         safeToTakePicture = true;
 
     }

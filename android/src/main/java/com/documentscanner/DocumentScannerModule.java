@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.documentscanner.views.MainView;
 import com.documentscanner.views.OpenNoteCameraView;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -24,6 +25,12 @@ public class DocumentScannerModule extends ReactContextBaseJavaModule{
 
     @Override
     public String getName() {
-        return "DocumentScanner";
+        return "DocumentScannerManager";
+    }
+
+    @ReactMethod
+    public void capture(){
+        MainView view = MainView.getInstance();
+        view.capture();
     }
 }
