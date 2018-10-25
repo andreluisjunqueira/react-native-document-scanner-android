@@ -2,14 +2,10 @@ package com.documentscanner.views;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.documentscanner.R;
-import com.facebook.react.bridge.WritableMap;
 
 /**
  * Created by andre on 09/01/2018.
@@ -19,7 +15,17 @@ public class MainView extends FrameLayout{
     private OpenNoteCameraView view = null;
     private FrameLayout frameLayout = null;
 
-    public MainView(Context context, Activity activity) {
+    public static MainView instance = null;
+
+    public static MainView getInstance(){
+        return instance;
+    }
+
+    public static void createInstance(Context context, Activity activity){
+        instance = new MainView(context, activity);
+    }
+
+    private MainView(Context context, Activity activity) {
         super(context);
 
         LayoutInflater lf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -64,4 +70,22 @@ public class MainView extends FrameLayout{
         view.removeOnProcessingListener();
     }
 
+    public void setOverlayColor(String rgbaColor){
+
+    }
+
+    public void setBrightness(double brightness){
+        view.setBrightness(brightness);
+    }
+
+    public void setContrast(double contrast){
+        view.setContrast(contrast);
+    }
+    public void setManualOnly(boolean manualOnly){
+        view.setManualOnly(manualOnly);
+    }
+
+    public void capture() {
+        view.capture();
+    }
 }

@@ -1,60 +1,111 @@
-###########################################################################
-#### WORK IN PROGRESS    --- NOT WORKING TOTTALY FINE YET                    #
-###########################################################################
 
-## React Native module to auto scan documents
+![enter image description 
+here](https://media.giphy.com/media/KZBdm9gbGGRBlRZV1t/giphy.gif)
+ 
+ ## React Native module to auto scan documents (Android only)
 
-1.  In MainApplication.java, add this Line `import com.documentscanner.DocumentScannerPackage;` at the top of file,
-2. after that add this:
-```java
-    @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new DocumentScannerPackage() <--- this line,
-            ...
-      );
-    }
-```
-3. #### IMPORTANT - Go to folder app/settings.gradle and add 
+  
+Live document detection library. Returns either a URI  of the captured image, allowing you to easily store it or use it as you wish !
 
->include ':react-native-documentscanner-android'
-project(':react-native-documentscanner-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-documentscanner-android/android')
-
-#### Add this
->include ':openCVLibrary310'
-project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
+Features:
+ - Live detection
+ - Perspective correction and image crop
+ - Flash
 
 
+### Get started
 
-### Usage
-```javascript
-import DocumentScanner from 'react-native-documentscanner-android';
+`npm install --save react-native-documentscanner-android`
 
-class YourComponent extends Component {
-  render() {
-    return (
-      <View>
-        <DocumentScanner
-          onPictureTaken={data =>{
-              console.log(data.path)
-          }}
-          enableTorch={false}
-          detectionCountBeforeCapture={5}
-        />
-      </View>
-    );
-  }
+ In MainApplication.java, add this Line `import com.documentscanner.DocumentScannerPackage;` at the top of file,
+
+ ```java
+@Override
+protected  List<ReactPackage> getPackages() {
+return Arrays.<ReactPackage>asList(
+	new  MainReactPackage(),
+	new  DocumentScannerPackage() <--- this  line,
+	...
+	);
 }
 ```
+#### IMPORTANT - Go to folder app/settings.gradle and add
+
+```java
+include ':react-native-documentscanner-android'
+project(':react-native-documentscanner-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-documentscanner-android/android')
+```
+ #### Add this (don't forget)
+```java
+include ':openCVLibrary310'
+project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
+```
+
+### Usage
+
+```javascript
+import  DocumentScanner  from  'react-native-documentscanner-android';
+
+class  YourComponent  extends  Component {
+	render() {
+		return (
+			<View>
+				<DocumentScanner
+					onPictureTaken={data  =>{
+						console.log(data.path)
+					}}
+					enableTorch={false}
+					detectionCountBeforeCapture={5}
+				/>
+			</View>
+		);
+	}
+}
+
+```
+
+  
+  
+
+### Properties
+
+|Props|Default|Type|Description
+|--|--|--|--|
+| manualOnly | false | `bool`|if true, auto-detect is disabled
+| enableTorch | false | `bool`|Allows to active or deactivate flash during document detection
+| detectionCountBeforeCapture | 15 |`number`|Number of correct rectangle to detect before capture document
+| brightness | 10 | `number`|This property only work to enhance document at the save moment
+| contrast | 1 | `number`|This property only work to enhance document at the save moment
+
+  
+
+### Manual capture
+
+ - Get the component ref
+
+`<DocumentScanner ref={(ref) => this.scanner = ref} />`
+
+- Then
+```javascript  
+this.scanner.capture();
+```
+### Returned Image
+| Prop | Params |Type| Description
+|--|--|--|--|
+| onPictureTaken | data | object | Returns an image in a object `{ path: ('imageUri')}`
+| onProcessing | data | object |Returns an object `{processing: (true | false)}` to show is an image is processing yet
+
+The images are saved in `Documents` folder.
+
+ #### Todo
+ - Pass overlay color dynamically
+ - Pass contrast and brightness to preview
+ - Use front cam
+ - Use base64
+ 
+## Contributors are welcome !!
 
 
-##### Params
-
-| Props  | Params  | type  | Description  |
-| ------------ | ------------ | ------------ | ------------ |
-| onPictureTaken  | function(data){ console.log(data.path)}  | function  | this function is passed to get the path of image |
-| enableTorch  | false  | boolean  | Enable or disable torch mode  |
-| detectionCountBeforeCapture  | 15  | number | number of rectangles detected before to capture the image  |
-
-### Contributors are welcome !!
+Inspired in android project 
+- https://github.com/ctodobom/OpenNoteScanner
+- https://github.com/Michaelvilleneuve/react-native-document-scanner
