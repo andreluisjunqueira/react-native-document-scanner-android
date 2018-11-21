@@ -93,4 +93,9 @@ public class DocumentScannerViewManager extends ViewGroupManager<MainView>{
         view.setContrast(contrast);
     }
 
+    @ReactProp(name="noGrayScale", defaultBoolean = false)
+    public void setRemoveGrayScale(MainView view, boolean bw){
+        view.setRemoveGrayScale(bw);
+    }
+
 }

@@ -18,6 +18,7 @@ var iface = {
       overlayColor: PropTypes.string,
       contrast: PropTypes.number,
       brightness: PropTypes.number,
+      noGrayScale: PropTypes.bool,
       ...View.propTypes // include the default view properties
     },
   };

@@ -76,6 +76,7 @@ class  YourComponent  extends  Component {
 | detectionCountBeforeCapture | 15 |`number`|Number of correct rectangle to detect before capture document
 | brightness | 10 | `number`|This property only work to enhance document at the save moment
 | contrast | 1 | `number`|This property only work to enhance document at the save moment
+| noGrayScale | false | `bool`|Currently this module saves pictures only in gray scale, this property adds the option to disable gray scale
 
   
 
