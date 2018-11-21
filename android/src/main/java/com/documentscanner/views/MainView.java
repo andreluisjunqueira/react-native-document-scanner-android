@@ -84,6 +84,9 @@ public class MainView extends FrameLayout{
     public void setManualOnly(boolean manualOnly){
         view.setManualOnly(manualOnly);
     }
+    public void setRemoveGrayScale(boolean grayscale) {
+        view.setRemoveGrayScale(grayscale);
+    }
 
     public void capture() {
         view.capture();
