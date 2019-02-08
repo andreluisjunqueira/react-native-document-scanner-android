@@ -35,6 +35,7 @@ import com.documentscanner.views.HUDCanvasView;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
@@ -156,9 +157,8 @@ public class ImageProcessor extends Handler {
         if ( detectPreviewDocument(frame) && focused ) {
             numOfSquares ++;
             if(numOfSquares == numOfRectangles) {
-                mMainActivity.blinkScreenAndShutterSound();
-                mMainActivity.waitSpinnerVisible();
                 mMainActivity.requestPicture();
+                mMainActivity.waitSpinnerVisible();
                 numOfSquares = 0;
             }
         }else{
@@ -196,7 +196,6 @@ public class ImageProcessor extends Handler {
 
     }
 
-
     private ScannedDocument detectDocument(Mat inputRgba) {
         ArrayList<MatOfPoint> contours = findContours(inputRgba);
 
@@ -205,17 +204,13 @@ public class ImageProcessor extends Handler {
         Quadrilateral quad = getQuadrilateral(contours, inputRgba.size());
 
         Mat doc;
-
         if (quad != null) {
-
             MatOfPoint c = quad.contour;
 
             sd.quadrilateral = quad;
             sd.previewPoints = mPreviewPoints;
             sd.previewSize = mPreviewSize;
-
             doc = fourPointTransform(inputRgba, quad.points);
-
         } else {
             doc = new Mat( inputRgba.size() , CvType.CV_8UC4 );
             inputRgba.copyTo(doc);
@@ -327,13 +322,13 @@ public class ImageProcessor extends Handler {
             Point[] points = approx.toArray();
 
             // select biggest 4 angles polygon
-            if (points.length == 4) {
+            // if (points.length == 4) {
                 Point[] foundPoints = sortPoints(points);
 
                 if (insideArea(foundPoints, size)) {
                     return new Quadrilateral( c , foundPoints );
                 }
-            }
+            // }
         }
 
         return null;
