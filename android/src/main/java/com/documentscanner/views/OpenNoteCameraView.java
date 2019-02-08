@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.Size;
@@ -71,6 +72,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
@@ -188,13 +190,13 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
     public void setBrightness( double brightness ){
         if (mImageProcessor != null) {
-            mImageProcessor.setBrightness(numberOfRectangles);
+            mImageProcessor.setBrightness(brightness);
         }
     }
 
     public void setContrast( double contrast){
         if (mImageProcessor != null) {
-            mImageProcessor.setContrast(numberOfRectangles);
+            mImageProcessor.setContrast(contrast);
         }
     }
 
@@ -409,16 +411,15 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         PackageManager pm = mActivity.getPackageManager();
 
         if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)) {
-            param.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+            param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
         } else {
             mFocused = true;
         }
         if (pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
             param.setFlashMode(enableTorch ? Camera.Parameters.FLASH_MODE_TORCH : Camera.Parameters.FLASH_MODE_OFF);
         }
-
+         
         mCamera.setParameters(param);
-
 //        mBugRotate = mSharedPref.getBoolean("bug_rotate", false);
 
         if (mBugRotate) {
@@ -541,13 +542,9 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     }
 
     public void waitSpinnerVisible() {
-
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                blinkView.bringToFront();
-                Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.blink);
-                blinkView.startAnimation(animation);
                 mWaitSpinner.setVisibility(View.VISIBLE);
                 WritableMap data = new WritableNativeMap();
                 data.putBoolean("processing", true);
@@ -560,11 +557,24 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                blinkView.setVisibility(View.INVISIBLE);
+//                blinkView.setVisibility(View.INVISIBLE);
                 mWaitSpinner.setVisibility(View.INVISIBLE);
                 WritableMap data = new WritableNativeMap();
                 data.putBoolean("processing", false);
                 mThis.processingListener.onProcessingChange(data);
+            }
+        });
+    }
+
+    public void blinkScreen() {
+        mActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                blinkView.bringToFront();
+                Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.blink);
+                blinkView.startAnimation(animation);
+                blinkView.setVisibility(View.INVISIBLE);
+
             }
         });
     }
@@ -592,22 +602,33 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         if (safeToTakePicture) {
 
             safeToTakePicture = false;
-            try{
-                //                if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
-                mCamera.autoFocus(new Camera.AutoFocusCallback() {
-                    @Override
-                    public void onAutoFocus(boolean success, Camera camera) {
-                        if (attemptToFocus) {
-                            return;
-                        } else {
-                            attemptToFocus = true;
+
+            try {
+                if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
+                    mCamera.autoFocus(new Camera.AutoFocusCallback() {
+                        @Override
+                        public void onAutoFocus(boolean success, Camera camera) {
+                            if (success) {
+                                mCamera.takePicture(null, null, pCallback);
+                                blinkScreen();
+                                blinkScreenAndShutterSound();
+                            }
+                            if (attemptToFocus) {
+                                return;
+                            } else {
+                                attemptToFocus = true;
+                            }
                         }
-                        Log.d("FOCUSSSSSS", "Focus success -->"+success);
-                        mCamera.takePicture(null,null,pCallback);
-                    }
-                });
+                    });
+                }else{
+                    mCamera.takePicture(null,null,pCallback);
+                    blinkScreen();
+                    blinkScreenAndShutterSound();
+                }
             }catch(Exception e){
-                this.waitSpinnerInvisible();
+                waitSpinnerInvisible();
+            }finally {
+                waitSpinnerInvisible();
             }
             return true;
         }
@@ -941,20 +962,6 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         mCamera.setParameters(par);
         Log.d(TAG,"flash: " + (stateFlash?"on":"off"));
         // */
-    }
-
-    public void takePicture(final String fileName) {
-        this.mPictureFileName = fileName;
-        // Postview and jpeg are sent in the same buffers if the queue is not empty when performing a capture.
-        // Clear up buffers to avoid mCamera.takePicture to be stuck because of a memory issue
-        mCamera.setPreviewCallback(null);
-        // PictureCallback is implemented by the current class
-        mCamera.takePicture(null, null, this);
-    }
-
-    public void takePicture(PictureCallback callback) {
-        mCamera.takePicture(null, null, callback);
-
     }
 
     @Override
