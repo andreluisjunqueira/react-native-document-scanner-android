@@ -40,6 +40,19 @@ project(':react-native-documentscanner-android').projectDir = new File(rootProje
 include ':openCVLibrary310'
 project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
 ```
+ #### In android/app/src/main/AndroidManifest.xml
+ Change manifest header to avoid "Manifest merger error". After you add `xmlns:tools="http://schemas.android.com/tools"` should look like this:
+ ```
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.<yourAppName>" xmlns:tools="http://schemas.android.com/tools">
+ ```
+ Add `tools:replace="android:allowBackup"` in <application tag. It should look like this:
+ ```
+ <application tools:replace="android:allowBackup" android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:theme="@style/AppTheme">
+ ```
+ Add Camera permissions request:
+ ```
+ <uses-permission android:name="android.permission.CAMERA" />
+ ```
 
 ### Usage
 
