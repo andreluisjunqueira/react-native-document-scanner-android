@@ -49,6 +49,10 @@ class Scanner extends PureComponent{
     CameraManager.capture();
   }
 
+  focus = ()=>{
+    CameraManager.focus();
+  }
+
   render(){
     return <DocumentScanner {...this.props}/>
   }

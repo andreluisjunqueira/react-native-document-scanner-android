@@ -91,4 +91,8 @@ public class MainView extends FrameLayout{
     public void capture() {
         view.capture();
     }
+
+    public void focus() {
+        view.focus();
+    }
 }
