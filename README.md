@@ -20,11 +20,11 @@ In MainApplication.java, add this Line `import com.documentscanner.DocumentScann
 ```java
 @Override
 protected  List<ReactPackage> getPackages() {
-return Arrays.<ReactPackage>asList(
-new  MainReactPackage(),
-new  DocumentScannerPackage() <--- this  line,
-...
-);
+  return Arrays.<ReactPackage>asList(
+    new  MainReactPackage(),
+    new  DocumentScannerPackage() <--- this  line,
+    ...
+  );
 }
 ```
 
