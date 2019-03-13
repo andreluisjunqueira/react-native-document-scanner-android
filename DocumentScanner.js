@@ -59,7 +59,7 @@ class Scanner extends PureComponent{
 
   render() {
     return (
-      <View style={this.style}>
+      <View style={this.props.style}>
         <DocumentScanner {...this.props} />
         <TouchableOpacity activeOpacity={1} style={Styles.focusOverlay} onPressOut={() => this.focus()} />
       </View>
