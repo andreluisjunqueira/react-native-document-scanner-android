@@ -40,6 +40,10 @@ project(':react-native-documentscanner-android').projectDir = new File(rootProje
 include ':openCVLibrary310'
 project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
 ```
+ #### Add this to android/app/build.gradle (dependencies section)
+```
+implementation project(':react-native-documentscanner-android')
+```
 
 ### Usage
 
