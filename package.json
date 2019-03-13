@@ -35,9 +35,9 @@
   "deprecated": false,
   "description": "React Native Module to auto detect documents",
   "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint": "^3.7.1",
-    "eslint-config-tipsi": "^12.0.0"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-tipsi": "^2.2.0"
   },
   "homepage": "https://github.com/andreluisjunqueira/react-native-documentscanner-android",
   "keywords": [
