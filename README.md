@@ -98,7 +98,7 @@ The images are saved in `Documents` folder.
 
 ### Manual Focus
 
-- If the device has autofocus feature, you can use this method to focus on the center of the screen
+- If the device has autofocus feature, you can use this method to focus on the center of the screen programmatically
 
 - Get the component ref
 
