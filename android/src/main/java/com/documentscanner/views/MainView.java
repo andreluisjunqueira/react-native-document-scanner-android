@@ -51,25 +51,13 @@ public class MainView extends FrameLayout{
 
         int action = MotionEventCompat.getActionMasked(event);
 
-        String DEBUG_TAG = "DEBUG_SCANNER";
-
         switch (action) {
-            case (MotionEvent.ACTION_DOWN):
-                Log.d(DEBUG_TAG,"Action was DOWN");
-                return true;
-            case (MotionEvent.ACTION_MOVE):
-                Log.d(DEBUG_TAG,"Action was MOVE");
-                return true;
             case (MotionEvent.ACTION_UP):
                 this.focus();
-                Log.d(DEBUG_TAG,"Action was UP");
-                return true;
+            case (MotionEvent.ACTION_DOWN):
+            case (MotionEvent.ACTION_MOVE):
             case (MotionEvent.ACTION_CANCEL):
-                Log.d(DEBUG_TAG,"Action was CANCEL");
-                return true;
             case (MotionEvent.ACTION_OUTSIDE):
-                Log.d(DEBUG_TAG,"Movement occurred outside bounds " +
-                        "of current screen element");
                 return true;
             default:
                 return super.onTouchEvent(event);
