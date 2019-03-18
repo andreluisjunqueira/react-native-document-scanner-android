@@ -96,19 +96,6 @@ this.scanner.capture();
 
 The images are saved in `Documents` folder.
 
-### Manual Focus
-
-- If the device has autofocus feature, you can use this method to focus on the center of the screen programmatically
-
-- Get the component ref
-
-`<DocumentScanner ref={(ref) => this.scanner = ref} />`
-
-- Then
-
-```javascript
-this.scanner.focus();
-```
 
 #### Todo
 
