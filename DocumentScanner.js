@@ -6,10 +6,7 @@ import {
     NativeModules,
     requireNativeComponent,
     View,
-    TouchableOpacity
 } from 'react-native';
-
-import Styles from './styles';
 
 var iface = {
     name: 'DocumentScanner',
@@ -34,7 +31,6 @@ class Scanner extends PureComponent{
   static defaultProps = {
     onPictureTaken: ()=>{},
     onProcessing: ()=>{},
-    style: Styles.fill,
   }
 
   componentWillMount(){
@@ -53,17 +49,8 @@ class Scanner extends PureComponent{
     CameraManager.capture();
   }
 
-  focus = ()=>{
-    CameraManager.focus();
-  }
-
   render() {
-    return (
-      <View style={this.props.style}>
-        <DocumentScanner {...this.props} />
-        <TouchableOpacity activeOpacity={1} style={Styles.focusOverlay} onPressOut={() => this.focus()} />
-      </View>
-    );
+    return <DocumentScanner {...this.props} />;
   }
 }
 

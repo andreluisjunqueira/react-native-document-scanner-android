@@ -33,10 +33,4 @@ public class DocumentScannerModule extends ReactContextBaseJavaModule{
         MainView view = MainView.getInstance();
         view.capture();
     }
-
-    @ReactMethod
-    public void focus(){
-        MainView view = MainView.getInstance();
-        view.focus();
-    }
 }
