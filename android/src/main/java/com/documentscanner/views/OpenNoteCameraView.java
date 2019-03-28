@@ -184,6 +184,10 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
         this.requestManualPicture();
     }
 
+    public void focus(){
+        this.requestManualFocus();
+    }
+
     public void setManualOnly( boolean manualOnly){
         this.manualCapture = manualOnly;
     }
@@ -577,6 +581,24 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
 
             }
         });
+    }
+
+    public boolean requestManualFocus(){
+      PackageManager pm = mActivity.getPackageManager();
+      if(safeToTakePicture){
+        safeToTakePicture = false;
+        if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)) {
+          mCamera.autoFocus(new Camera.AutoFocusCallback() {
+            @Override
+            public void onAutoFocus(boolean success, Camera camera) {
+              Log.d(TAG,"Manual focus => " + success);
+            }
+          });
+        }
+        safeToTakePicture = true;
+        return true;
+      }
+      return false;
     }
 
     public boolean requestManualPicture(){

@@ -2,7 +2,9 @@ package com.documentscanner.views;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.view.MotionEventCompat;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
 import com.documentscanner.R;
@@ -41,6 +43,24 @@ public class MainView extends FrameLayout{
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         for(int i = 0 ; i < getChildCount() ; i++){
             getChildAt(i).layout(l, t, r, b);
+        }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        int action = MotionEventCompat.getActionMasked(event);
+
+        switch (action) {
+            case (MotionEvent.ACTION_UP):
+                this.focus();
+            case (MotionEvent.ACTION_DOWN):
+            case (MotionEvent.ACTION_MOVE):
+            case (MotionEvent.ACTION_CANCEL):
+            case (MotionEvent.ACTION_OUTSIDE):
+                return true;
+            default:
+                return super.onTouchEvent(event);
         }
     }
 
@@ -90,5 +110,9 @@ public class MainView extends FrameLayout{
 
     public void capture() {
         view.capture();
+    }
+
+    private void focus() {
+        view.focus();
     }
 }

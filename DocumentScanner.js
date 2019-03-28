@@ -5,7 +5,7 @@ import {
     DeviceEventEmitter, // android
     NativeModules,
     requireNativeComponent,
-    View
+    View,
 } from 'react-native';
 
 var iface = {
@@ -49,8 +49,8 @@ class Scanner extends PureComponent{
     CameraManager.capture();
   }
 
-  render(){
-    return <DocumentScanner {...this.props}/>
+  render() {
+    return <DocumentScanner {...this.props} />;
   }
 }
 
