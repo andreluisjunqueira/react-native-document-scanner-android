@@ -3,6 +3,9 @@ package com.documentscanner;
 import android.app.Activity;
 import android.util.Log;
 
+import android.content.Context;
+import android.content.ContextWrapper;
+
 import com.documentscanner.views.MainView;
 import com.documentscanner.views.OpenNoteCameraView;
 import com.facebook.react.bridge.Callback;
@@ -23,6 +26,14 @@ import javax.annotation.Nullable;
 
 public class DocumentScannerViewManager extends ViewGroupManager<MainView>{
 
+    private static Activity unwrap(Context context) {
+        while (!(context instanceof Activity) && context instanceof ContextWrapper) {
+            context = ((ContextWrapper) context).getBaseContext();
+        }
+
+        return (Activity) context;
+    }
+
     public static final String REACT_CLASS = "DocumentScanner";
     private MainView view = null;
 
@@ -34,7 +45,7 @@ public class DocumentScannerViewManager extends ViewGroupManager<MainView>{
     @Override
     protected MainView createViewInstance(final ThemedReactContext reactContext) {
        //OpenNoteCameraView view = new OpenNoteCameraView(reactContext, -1, reactContext.getCurrentActivity());
-        MainView.createInstance(reactContext,(Activity) reactContext.getBaseContext());
+        MainView.createInstance(reactContext,(Activity) unwrap(reactContext.getBaseContext()));
 
         view = MainView.getInstance();
         view.setOnProcessingListener(new OpenNoteCameraView.OnProcessingListener() {
