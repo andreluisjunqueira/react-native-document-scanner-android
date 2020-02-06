@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/androidTest/debug/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/bundles/debug/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/androidTest/debug/mipmap-anydpi-v26/ic_launcher.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/bundles/debug/res/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

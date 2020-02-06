@@ -1,0 +1,1717 @@
+[
+    {
+        "outputFile": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 119,
+                    "endOffset": 170
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 119,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 175,
+                    "endColumn": 107,
+                    "endOffset": 278
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endColumn": 107,
+                        "endOffset": 278
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 283,
+                    "endColumn": 122,
+                    "endOffset": 401
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 283,
+                        "endColumn": 122,
+                        "endOffset": 401
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 406,
+                    "endColumn": 105,
+                    "endOffset": 507
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 406,
+                        "endColumn": 105,
+                        "endOffset": 507
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 512,
+                    "endColumn": 106,
+                    "endOffset": 614
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 512,
+                        "endColumn": 106,
+                        "endOffset": 614
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 619,
+                    "endColumn": 88,
+                    "endOffset": 703
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 619,
+                        "endColumn": 88,
+                        "endOffset": 703
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 708,
+                    "endColumn": 100,
+                    "endOffset": 804
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 708,
+                        "endColumn": 100,
+                        "endOffset": 804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 809,
+                    "endColumn": 117,
+                    "endOffset": 922
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 809,
+                        "endColumn": 117,
+                        "endOffset": 922
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 927,
+                    "endColumn": 82,
+                    "endOffset": 1005
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 927,
+                        "endColumn": 82,
+                        "endOffset": 1005
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1010,
+                    "endColumn": 79,
+                    "endOffset": 1085
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1010,
+                        "endColumn": 79,
+                        "endOffset": 1085
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1090,
+                    "endColumn": 86,
+                    "endOffset": 1172
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1090,
+                        "endColumn": 86,
+                        "endOffset": 1172
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1177,
+                    "endColumn": 106,
+                    "endOffset": 1279
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1177,
+                        "endColumn": 106,
+                        "endOffset": 1279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1284,
+                    "endColumn": 111,
+                    "endOffset": 1391
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1284,
+                        "endColumn": 111,
+                        "endOffset": 1391
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1396,
+                    "endColumn": 101,
+                    "endOffset": 1493
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1396,
+                        "endColumn": 101,
+                        "endOffset": 1493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1498,
+                    "endColumn": 107,
+                    "endOffset": 1601
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1498,
+                        "endColumn": 107,
+                        "endOffset": 1601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1606,
+                    "endColumn": 106,
+                    "endOffset": 1708
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1606,
+                        "endColumn": 106,
+                        "endOffset": 1708
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1713,
+                    "endColumn": 109,
+                    "endOffset": 1818
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1713,
+                        "endColumn": 109,
+                        "endOffset": 1818
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1823,
+                    "endColumn": 124,
+                    "endOffset": 1943
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1823,
+                        "endColumn": 124,
+                        "endOffset": 1943
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1948,
+                    "endColumn": 99,
+                    "endOffset": 2043
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1948,
+                        "endColumn": 99,
+                        "endOffset": 2043
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2048,
+                    "endColumn": 54,
+                    "endOffset": 2098
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 842,
+                        "endColumn": 54,
+                        "endOffset": 892
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2103,
+                    "endColumn": 46,
+                    "endOffset": 2145
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 795,
+                        "endColumn": 46,
+                        "endOffset": 837
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2150,
+                    "endColumn": 49,
+                    "endOffset": 2195
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 49,
+                        "endOffset": 154
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2200,
+                    "endColumn": 53,
+                    "endOffset": 2249
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 159,
+                        "endColumn": 53,
+                        "endOffset": 208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2254,
+                    "endColumn": 47,
+                    "endOffset": 2297
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 4,
+                        "startOffset": 5004,
+                        "endColumn": 47,
+                        "endOffset": 5047
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2302,
+                    "endColumn": 62,
+                    "endOffset": 2360
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 3740,
+                        "endColumn": 62,
+                        "endOffset": 3798
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2365,
+                    "endColumn": 50,
+                    "endOffset": 2411
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 897,
+                        "endColumn": 50,
+                        "endOffset": 943
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2416,
+                    "endColumn": 47,
+                    "endOffset": 2459
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 3430,
+                        "endColumn": 47,
+                        "endOffset": 3473
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2464,
+                    "endColumn": 41,
+                    "endOffset": 2501
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 213,
+                        "endColumn": 41,
+                        "endOffset": 250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2506,
+                    "endColumn": 42,
+                    "endOffset": 2544
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 255,
+                        "endColumn": 42,
+                        "endOffset": 293
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2549,
+                    "endColumn": 53,
+                    "endOffset": 2598
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 53,
+                        "endOffset": 104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2603,
+                    "endColumn": 151,
+                    "endOffset": 2750
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 3478,
+                        "endColumn": 151,
+                        "endOffset": 3625
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2755,
+                    "endColumn": 52,
+                    "endOffset": 2803
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1464,
+                        "endColumn": 52,
+                        "endOffset": 1512
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2808,
+                    "endColumn": 62,
+                    "endOffset": 2866
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2057,
+                        "endColumn": 62,
+                        "endOffset": 2115
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2871,
+                    "endColumn": 160,
+                    "endOffset": 3027
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 2120,
+                        "endColumn": 160,
+                        "endOffset": 2276
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3032,
+                    "endColumn": 64,
+                    "endOffset": 3092
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1992,
+                        "endColumn": 64,
+                        "endOffset": 2052
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3097,
+                    "endColumn": 81,
+                    "endOffset": 3174
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 4700,
+                        "endColumn": 81,
+                        "endOffset": 4777
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3179,
+                    "endColumn": 65,
+                    "endOffset": 3240
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 2587,
+                        "endColumn": 65,
+                        "endOffset": 2648
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3245,
+                    "endColumn": 144,
+                    "endOffset": 3385
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 2653,
+                        "endColumn": 144,
+                        "endOffset": 2793
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3390,
+                    "endColumn": 58,
+                    "endOffset": 3444
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1397,
+                        "endColumn": 66,
+                        "endOffset": 1459
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3449,
+                    "endColumn": 53,
+                    "endOffset": 3498
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 53,
+                        "endOffset": 104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3503,
+                    "endColumn": 69,
+                    "endOffset": 3568
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 69,
+                        "endOffset": 174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 3573,
+                    "endColumn": 78,
+                    "endOffset": 3647
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 179,
+                        "endColumn": 78,
+                        "endOffset": 253
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 3652,
+                    "endColumn": 70,
+                    "endOffset": 3718
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 258,
+                        "endColumn": 70,
+                        "endOffset": 324
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 3723,
+                    "endColumn": 60,
+                    "endOffset": 3779
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endColumn": 60,
+                        "endOffset": 385
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3784,
+                    "endColumn": 55,
+                    "endOffset": 3835
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 390,
+                        "endColumn": 55,
+                        "endOffset": 441
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 3840,
+                    "endColumn": 58,
+                    "endOffset": 3894
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 446,
+                        "endColumn": 58,
+                        "endOffset": 500
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 3899,
+                    "endColumn": 73,
+                    "endOffset": 3968
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 505,
+                        "endColumn": 73,
+                        "endOffset": 574
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3973,
+                    "endColumn": 51,
+                    "endOffset": 4020
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1345,
+                        "endColumn": 51,
+                        "endOffset": 1392
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4025,
+                    "endColumn": 96,
+                    "endOffset": 4117
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 298,
+                        "endColumn": 96,
+                        "endOffset": 390
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 4122,
+                    "endColumn": 75,
+                    "endOffset": 4193
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 395,
+                        "endColumn": 75,
+                        "endOffset": 466
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 4198,
+                    "endColumn": 101,
+                    "endOffset": 4295
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 948,
+                        "endColumn": 101,
+                        "endOffset": 1045
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 4300,
+                    "endColumn": 50,
+                    "endOffset": 4346
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 471,
+                        "endColumn": 50,
+                        "endOffset": 517
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 4351,
+                    "endColumn": 51,
+                    "endOffset": 4398
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 4284,
+                        "endColumn": 51,
+                        "endOffset": 4331
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 4403,
+                    "endColumn": 147,
+                    "endOffset": 4546
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 4,
+                        "startOffset": 4336,
+                        "endColumn": 147,
+                        "endOffset": 4479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 4551,
+                    "endColumn": 48,
+                    "endOffset": 4595
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1050,
+                        "endColumn": 48,
+                        "endOffset": 1094
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 4600,
+                    "endColumn": 70,
+                    "endOffset": 4666
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1099,
+                        "endColumn": 70,
+                        "endOffset": 1165
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 4671,
+                    "endColumn": 82,
+                    "endOffset": 4749
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 4617,
+                        "endColumn": 82,
+                        "endOffset": 4695
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 4754,
+                    "endColumn": 74,
+                    "endOffset": 4824
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 4929,
+                        "endColumn": 74,
+                        "endOffset": 4999
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4829,
+                    "endColumn": 70,
+                    "endOffset": 4895
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 4,
+                        "startOffset": 4858,
+                        "endColumn": 70,
+                        "endOffset": 4924
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 4900,
+                    "endColumn": 60,
+                    "endOffset": 4956
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 4006,
+                        "endColumn": 60,
+                        "endOffset": 4062
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 4961,
+                    "endColumn": 216,
+                    "endOffset": 5173
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 4067,
+                        "endColumn": 216,
+                        "endOffset": 4279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 5178,
+                    "endColumn": 58,
+                    "endOffset": 5232
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 3681,
+                        "endColumn": 58,
+                        "endOffset": 3735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 5237,
+                    "endColumn": 50,
+                    "endOffset": 5283
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 3630,
+                        "endColumn": 50,
+                        "endOffset": 3676
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 5288,
+                    "endColumn": 61,
+                    "endOffset": 5345
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 522,
+                        "endColumn": 61,
+                        "endOffset": 579
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 5350,
+                    "endColumn": 66,
+                    "endOffset": 5412
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1170,
+                        "endColumn": 66,
+                        "endOffset": 1232
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 5417,
+                    "endColumn": 50,
+                    "endOffset": 5463
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1517,
+                        "endColumn": 50,
+                        "endOffset": 1563
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 5468,
+                    "endColumn": 66,
+                    "endOffset": 5530
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2281,
+                        "endColumn": 66,
+                        "endOffset": 2343
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 5535,
+                    "endColumn": 238,
+                    "endOffset": 5769
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 2348,
+                        "endColumn": 238,
+                        "endOffset": 2582
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 5774,
+                    "endColumn": 202,
+                    "endOffset": 5972
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 3803,
+                        "endColumn": 202,
+                        "endOffset": 4001
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 5977,
+                    "endColumn": 75,
+                    "endOffset": 6048
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 4782,
+                        "endColumn": 75,
+                        "endOffset": 4853
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 6053,
+                    "endColumn": 107,
+                    "endOffset": 6156
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1237,
+                        "endColumn": 107,
+                        "endOffset": 1340
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 6161,
+                    "endColumn": 56,
+                    "endOffset": 6213
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 3006,
+                        "endColumn": 56,
+                        "endOffset": 3058
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 6218,
+                    "endColumn": 81,
+                    "endOffset": 6295
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 3063,
+                        "endColumn": 81,
+                        "endOffset": 3140
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 75,
+                    "startColumn": 4,
+                    "startOffset": 6300,
+                    "endColumn": 50,
+                    "endOffset": 6346
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1941,
+                        "endColumn": 50,
+                        "endOffset": 1987
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 6351,
+                    "endColumn": 61,
+                    "endOffset": 6408
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1568,
+                        "endColumn": 61,
+                        "endOffset": 1625
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 77,
+                    "startColumn": 4,
+                    "startOffset": 6413,
+                    "endColumn": 144,
+                    "endOffset": 6553
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1696,
+                        "endColumn": 144,
+                        "endOffset": 1836
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 6558,
+                    "endColumn": 99,
+                    "endOffset": 6653
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1841,
+                        "endColumn": 99,
+                        "endOffset": 1936
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 79,
+                    "startColumn": 4,
+                    "startOffset": 6658,
+                    "endColumn": 65,
+                    "endOffset": 6719
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1630,
+                        "endColumn": 65,
+                        "endOffset": 1691
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 6724,
+                    "endColumn": 62,
+                    "endOffset": 6782
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 732,
+                        "endColumn": 62,
+                        "endOffset": 790
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 81,
+                    "startColumn": 4,
+                    "startOffset": 6787,
+                    "endColumn": 218,
+                    "endOffset": 7001
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 3211,
+                        "endColumn": 218,
+                        "endOffset": 3425
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 7006,
+                    "endColumn": 65,
+                    "endOffset": 7067
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 3145,
+                        "endColumn": 65,
+                        "endOffset": 3206
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 83,
+                    "startColumn": 4,
+                    "startOffset": 7072,
+                    "endColumn": 100,
+                    "endOffset": 7168
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-pt/values-pt.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2048,
+                        "endColumn": 100,
+                        "endOffset": 2144
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 84,
+                    "startColumn": 4,
+                    "startOffset": 7173,
+                    "endColumn": 65,
+                    "endOffset": 7234
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 5052,
+                        "endColumn": 65,
+                        "endOffset": 5113
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 7239,
+                    "endColumn": 94,
+                    "endOffset": 7329
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 5118,
+                        "endColumn": 94,
+                        "endOffset": 5208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 86,
+                    "startColumn": 4,
+                    "startOffset": 7334,
+                    "endColumn": 54,
+                    "endOffset": 7384
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 4484,
+                        "endColumn": 54,
+                        "endOffset": 4534
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 87,
+                    "startColumn": 4,
+                    "startOffset": 7389,
+                    "endColumn": 77,
+                    "endOffset": 7462
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 4539,
+                        "endColumn": 77,
+                        "endOffset": 4612
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 7467,
+                    "endColumn": 88,
+                    "endOffset": 7551
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 584,
+                        "endColumn": 88,
+                        "endOffset": 668
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 89,
+                    "startColumn": 4,
+                    "startOffset": 7556,
+                    "endColumn": 58,
+                    "endOffset": 7610
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 673,
+                        "endColumn": 58,
+                        "endOffset": 727
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 7615,
+                    "endColumn": 59,
+                    "endOffset": 7670
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2798,
+                        "endColumn": 59,
+                        "endOffset": 2853
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 7675,
+                    "endColumn": 147,
+                    "endOffset": 7818
+                },
+                "from": {
+                    "file": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/values-pt/strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2858,
+                        "endColumn": 147,
+                        "endOffset": 3001
+                    }
+                }
+            }
+        ]
+    }
+]

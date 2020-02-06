@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/androidTest/debug/xml/preferences.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.facebook.react/react-native/0.19.1/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/androidTest/debug/xml/settings.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/bundles/debug/res/xml/settings.xml"
+    }
+]

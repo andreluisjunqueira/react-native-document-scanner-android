@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/androidTest/debug/menu/menu_gallery.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/bundles/debug/res/menu/menu_gallery.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/androidTest/debug/menu/menu_imagepager.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/bundles/debug/res/menu/menu_imagepager.xml"
+    }
+]

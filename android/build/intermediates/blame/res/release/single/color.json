@@ -1,0 +1,166 @@
+[
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_chip_close_icon_tint.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_chip_close_icon_tint.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_btn_text_color_selector.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_btn_text_color_selector.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/design_error.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_tint_spinner.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_btn_ripple_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_btn_ripple_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_tabs_icon_color_selector_colored.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_tabs_icon_color_selector_colored.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_btn_bg_color_selector.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_btn_bg_color_selector.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_tabs_icon_color_selector.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_tabs_icon_color_selector.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/design_tint_password_toggle.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_text_btn_text_color_selector.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_text_btn_text_color_selector.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_chip_text_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_chip_text_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_tabs_ripple_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_tabs_ripple_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_chip_background_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_chip_background_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_bottom_nav_colored_item_tint.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_bottom_nav_colored_item_tint.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_btn_stroke_color_selector.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_btn_stroke_color_selector.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_btn_text_btn_ripple_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_btn_text_btn_ripple_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_tabs_legacy_text_color_selector.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_tabs_legacy_text_color_selector.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_tint_default.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_tint_switch_track.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_bottom_nav_item_tint.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_bottom_nav_item_tint.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_tabs_colored_ripple_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_tabs_colored_ripple_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_chip_ripple_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_chip_ripple_color.xml"
+    },
+    {
+        "merged": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/color/mtrl_fab_ripple_color.xml",
+        "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cf9bbf640108b9322bcdc4a41c77c029/res/color/mtrl_fab_ripple_color.xml"
+    }
+]

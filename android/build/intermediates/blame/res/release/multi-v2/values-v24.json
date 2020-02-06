@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/release/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "/Users/alessioprestileo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/2f34531135f88ed0ef2a797a79dfb1a0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                }
+            ]
+        }
+    ]
+}

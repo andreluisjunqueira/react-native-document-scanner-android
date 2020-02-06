@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/drawable-v21/ic_menu_gallery.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/ic_menu_slideshow.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/drawable-v21/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/ic_menu_share.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/drawable-v21/ic_menu_share.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/ic_menu_camera.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/drawable-v21/ic_menu_camera.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/ic_menu_send.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/drawable-v21/ic_menu_send.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/ic_menu_manage.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/src/main/res/drawable-v21/ic_menu_manage.xml"
+    },
+    {
+        "merged": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/andrejunqueira/Documents/workspace/Projetos/testescanner/node_modules/react-native-documentscanner-android/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:3:7-27
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:5:7-34
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml:4:7-33
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+uses-sdk
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/openCVLibrary310/src/main/AndroidManifest.xml

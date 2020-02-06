@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_8c6c109d2b347d7badc74838adf097b498f56499.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_236a34e4578563199182ea2eb0c1daa080532d6c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_e33f22a7ce5db731395b12d225a8ad3ad2e4d5e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_042021cb0231ae882466cea4877f293b21efdbdc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/usr/local/Cellar/android-sdk/24.4.1_1/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_a12a58e60202c69d81c9a0c51e787f1734022445.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_de87ebd15669bc6343a8323e57014b511be14aa8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/org.markdownj/markdownj-core/0.4/7dab17c3d4d492a2b776d25eb50e2320995de24c/markdownj-core-0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7dab17c3d4d492a2b776d25eb50e2320995de24c">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/markdownj-core-0.4_4adf76f2cc439fa154f2b544e44148d43bf80507.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_e88a2c5f316e3996709c2caa7be5421d1ed9577e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5_8c9c300fb15df49acbcb4ef33d98add03bb94555.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_6c7839e5bcf108502bbc5eefe6370d1951ac438e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_3b8124e96fa106f30eca94bc4ec1ba301d6ca580.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_9140347a7511c2a9ef999362b0926e9b2e481da7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0d3e48e200296061415952a358fad487e129adaa">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.45.1_0e29a1d4224eb5513105976af4fddd84af66e513.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_5edeba0a966cdb3c22b50c6c43084af0079e6dcb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_1f0817e2d9100ed24d74458a046f5eeb4ee145d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_3692d27b8006a0648fb143a00555607ab97dafb2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.0.1/9ebf6cd580d67601fbf88fd007aab4703b19e4c2/core-3.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9ebf6cd580d67601fbf88fd007aab4703b19e4c2">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/core-3.0.1_626fff837812e7ab0416b7e10788ffbd536e4c1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_b7fd5779c794c88143b77661c94821f7cecfe4ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_e623ce3c5a71c5e2153d856db7563c6bf32c405b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_7db2f3e1ceb095a2219a27ab7001de367aed8f54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/documentscanner/openCVLibrary310/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5c56fbbeced73a071dfdec924994b5d15a337fd3">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/documentscanner-openCVLibrary310-unspecified_7b2f5cedb4509cd8a0de5647398a168c61c322d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_0eddf60bbd90dd9f1ab437b4666406c24ce5a544.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_00983c84da541aad0baede0bc1737e3c29ddba25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_cbcffe8aa6cfcde3561c111eda9e3bd0d32b296d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_0549ae463613d001f9dea705c525f62a33463d6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_d058beed5c439440ed4676a7c366661b778bbecf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_fbd781bb6081a16612d30bc8935720054d05caa1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/us.feras.mdv/markdownview/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a607df9d5b048794ba6726f0643bda82e3a142c4">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/us.feras.mdv-markdownview-1.1.0_27dfd093e19e56ea96160015844760839733ca9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_49c50c6d8b603f771b423695cb7b5d9d8ba88c66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_648dffb31768352710dd8be7bd449455d9a78e1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_630898103bd17d91a48984be8e12114b34e82349.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/exploded-aar/org.piwik.sdk/piwik-sdk/0.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b3f6a63027e779d794f154c83087bef0a24e7af6">
+        <dex dex="/Users/andrejunqueira/Documents/workspace/Projetos/documentscanner/android/app/build/intermediates/pre-dexed/debug/org.piwik.sdk-piwik-sdk-0.0.4_b4b7377300b1cec4dc0234f1011a29d78e6e0e61.jar" />
+    </item>
+
+</items>

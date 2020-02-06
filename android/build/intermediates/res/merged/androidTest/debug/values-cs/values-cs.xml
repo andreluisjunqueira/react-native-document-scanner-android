@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Přejít na plochu"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s – %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s – %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Přejít nahoru"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Více možností"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Hotovo"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Zobrazit vše"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Vybrat aplikaci"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"VYPNUTO"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ZAPNUTO"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Vyhledat…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Smazat dotaz"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Vyhledávací dotaz"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Hledat"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Odeslat dotaz"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Hlasové vyhledávání"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Sdílet pomocí"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Sdílet pomocí %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Sbalit"</string>
+    <string name="about_filename">about-cs.md</string>
+    <string name="action_about">O aplikaci</string>
+    <string name="action_delete">Smazat</string>
+    <string name="action_share">Sdílet</string>
+    <string name="action_tag">Štítek</string>
+    <string name="activateunknown">Jít do nastavení</string>
+    <string name="answer_cancel">Zrušit</string>
+    <string name="answer_later">Později</string>
+    <string name="answer_no">Ne</string>
+    <string name="answer_yes">Ano</string>
+    <string name="app_name">Open Note Scanner</string>
+    <string name="ask_install_opencv">Z důvodu funkčnosti, Open Note Scanner potřebuje služby OpenCV Manager, která ještě není nainstalována.</string>
+    <string name="autoMode">Automaticky</string>
+    <string name="automatic_tagging">Automatické značení</string>
+    <string name="automatic_tagging_summary">Definuje automatické značky, které mají být aplikované na označené skeny pomocí speciálního stránkového vzoru</string>
+    <string name="basic_settings">Základní nastavení</string>
+    <string name="bitcoin_summary">Přispěj pomocí kryptoměny Bitcoin</string>
+    <string name="bug_rotate">Otočit obraz o 180º</string>
+    <string name="bug_rotate_summary">Některá zařízení mají fotoaparát vzhůru nohama. Toto nastavení nastaví vše, aby to dávalo smysl.</string>
+    <string name="bwMode">Černobílé</string>
+    <string name="catalyst_debugjs">Debug JS</string>
+    <string name="catalyst_element_inspector">Prozkoumat prvek</string>
+    <string name="catalyst_jsload_error">Unable to download JS bundle</string>
+    <string name="catalyst_jsload_message">Fetching JS bundle</string>
+    <string name="catalyst_jsload_title">Čekejte prosím...</string>
+    <string name="catalyst_reloadjs">Reload JS</string>
+    <string name="catalyst_settings">Dev Settings</string>
+    <string name="catalyst_settings_title">Catalyst Dev Settings</string>
+    <string name="colorMode">Barevně</string>
+    <string name="confirm_delete_multiple_text">Přejete si smazat vybrané obrázky?</string>
+    <string name="confirm_delete_text">Přejete si smazat tento obrázek?</string>
+    <string name="confirm_install_opencv">Přejete si stáhnout OpenCV Manager z GitHub?</string>
+    <string name="confirm_title">Potvrdit</string>
+    <string name="donate">Kup mi kafe</string>
+    <string name="donate_summary">Pokud se ti aplikace líbí a myslíš si, že je užitečná, můžeš zvážit přispění</string>
+    <string name="downloading">Stahování</string>
+    <string name="downloading_opencv">Stahování OpenCV Manager</string>
+    <string name="feedback_and_contributions">Zpětná vazba a příspěvky</string>
+    <string name="filterModeOff">Zpracování obrázku Vypnout</string>
+    <string name="filterModeOn">Zpracování obrázku Zapnout</string>
+    <string name="github_project">Projekt na GitHub</string>
+    <string name="github_project_summary">Tato aplikace je Open Source, můžete ji pomoct vylepšit zpětnou vazbou, hlášením problémů, kódováním a překládáním přes GitHub projektovou stránku</string>
+    <string name="githubdownload">Přímé stáhnutí</string>
+    <string name="googleplay">Google Play</string>
+    <string name="images_scanned">Oskenované obrázky</string>
+    <string name="install_opencv">Instalovat OpenCV Manager</string>
+    <string name="manualMode">Manuálně</string>
+    <string name="match_aspect">Srovnat poměr stran náhledu</string>
+    <string name="match_aspect_summary">Většina zařízení má poměr stran nejvyššího rozlišení jiný než u náhledu. Tato možnost vybere nejvyšší možné rozlišení, které se shoduje s poměrem stran náhledu</string>
+    <string name="messageactivateunknown">Google Play není dostupné a instalace z neznámých zdrojů je zakázána. Prosím, jděte do nastavení a aktivujte ji.</string>
+    <string name="paypal_summary">Přijímáno mnoho druhů kreditních karet</string>
+    <string name="scanningToast">Hledání dokumentu\nStiskněte znovu pro vyfocení celé oblasti</string>
+    <string name="send_message">Poslat zprávu</string>
+    <string name="send_message_summary">Poslat zprávu vývojáři </string>
+    <string name="settings">Nastavení</string>
+    <string name="share_app">Sdílet aplikaci</string>
+    <string name="share_app_body">"Podívejte se na tuto skvělou aplikací, která oskenuje poznámky, kresby a dokumenty pomocí fotoaparátu: "</string>
+    <string name="share_app_subject">Skvělá aplikace pro skenování poznámek a dokumentů</string>
+    <string name="share_app_using">Sdílet odkaz přes</string>
+    <string name="share_snackbar">Sdílet obrázky přes</string>
+    <string name="stats_optin_text">Chcete umožnit Open Note Scanner zasílat anonymní data o používání vývojáři?\n\n Své rozhodnutí můžete kdykoli změnit v nabídce nastavení.</string>
+    <string name="stats_optin_title">Statistiky používání</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="storage_folder">Složka uložiště</string>
+    <string name="storage_folder_summary">Určuje, kde budou naskenované soubory uloženy</string>
+    <string name="telegram">Skupina Telegram</string>
+    <string name="telegram_summary">Mluv o projektu na Telegramu</string>
+    <string name="title_activity_full_image">Prohlížeč oskenovaných obrázků</string>
+    <string name="title_activity_gallery">Galerie</string>
+    <string name="usage_stats">Statistiky používání</string>
+    <string name="usage_stats_summary">Zasílat různé data o používání vývojáři. Žádný obsah nebude zaslán.</string>
+</resources>

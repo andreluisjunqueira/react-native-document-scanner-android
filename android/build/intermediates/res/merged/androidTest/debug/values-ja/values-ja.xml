@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"ホームへ移動"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s、%2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s、%2$s、%3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"上へ移動"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"その他のオプション"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"完了"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"すべて表示"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"アプリの選択"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"OFF"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ON"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"検索…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"検索キーワードを削除"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"検索キーワード"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"検索"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"検索キーワードを送信"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"音声検索"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"共有"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%sと共有"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"折りたたむ"</string>
+    <string name="about_filename">about-ja.md</string>
+    <string name="action_about">アプリについて</string>
+    <string name="action_delete">削除</string>
+    <string name="action_share">共有</string>
+    <string name="action_tag">タグ</string>
+    <string name="activateunknown">設定に移動</string>
+    <string name="answer_cancel">キャンセル</string>
+    <string name="answer_later">後で</string>
+    <string name="answer_no">いいえ</string>
+    <string name="answer_yes">はい</string>
+    <string name="app_name">Open Note Scanner</string>
+    <string name="ask_install_opencv">Open Note Manager の動作には OpenCV Manager のサービスが必要です。OpenCV Manager はまだインストールされていません。</string>
+    <string name="autoMode">自動モード</string>
+    <string name="automatic_tagging">自動タグ付け</string>
+    <string name="automatic_tagging_summary">特別なページテンプレートを使用して、マークされたスキャンに適用される自動タグを定義します</string>
+    <string name="basic_settings">基本設定</string>
+    <string name="bitcoin_summary">Bitcoin 暗号通貨を使用して寄付します</string>
+    <string name="bug_rotate">画像を 180º 回転</string>
+    <string name="bug_rotate_summary">一部のデバイスでは、カメラが上下逆さまになっています。この設定で調整します</string>
+    <string name="bwMode">白黒モード</string>
+    <string name="catalyst_debugjs">Debug JS</string>
+    <string name="catalyst_element_inspector">要素を確認</string>
+    <string name="catalyst_jsload_error">Unable to download JS bundle</string>
+    <string name="catalyst_jsload_message">Fetching JS bundle</string>
+    <string name="catalyst_jsload_title">しばらくお待ちください</string>
+    <string name="catalyst_reloadjs">Reload JS</string>
+    <string name="catalyst_settings">Dev Settings</string>
+    <string name="catalyst_settings_title">Catalyst Dev Settings</string>
+    <string name="colorMode">カラーモード</string>
+    <string name="confirm_delete_multiple_text">スキャンした画像を削除しますか?</string>
+    <string name="confirm_delete_text">この画像を削除しますか?</string>
+    <string name="confirm_install_opencv">GitHub から OpenCV Manager をダウンロードしますか?</string>
+    <string name="confirm_title">確認</string>
+    <string name="donate">Buy me a coffee</string>
+    <string name="donate_summary">このアプリケーションを気に入って、役に立つと思うときは、寄付をご検討ください</string>
+    <string name="downloading">ダウンロード中</string>
+    <string name="downloading_opencv">OpenCV Manager のダウンロード中</string>
+    <string name="feedback_and_contributions">フィードバックと貢献</string>
+    <string name="filterModeOff">イメージプロセッサ オフ</string>
+    <string name="filterModeOn">イメージプロセッサ オン</string>
+    <string name="github_project">GitHub 上のプロジェクト</string>
+    <string name="github_project_summary">このアプリケーションはオープンソースです。GitHub プロジェクトのページからフィードバック、問題の報告、コード、翻訳で、改善を支援することができます</string>
+    <string name="githubdownload">ダイレクトダウンロード</string>
+    <string name="googleplay">Google Play</string>
+    <string name="images_scanned">画像をスキャンしました</string>
+    <string name="install_opencv">OpenCV Manager をインストール</string>
+    <string name="manualMode">手動モード</string>
+    <string name="match_aspect">プレビューのアスペクト比に一致</string>
+    <string name="match_aspect_summary">ほとんどのデバイスでは、最高の解像度の画像アスペクト比はプレビューとは異なります。この設定は、プレビューのアスペクト比に一致する最高の画像解像度を選択します</string>
+    <string name="messageactivateunknown">Google Play は利用できません。不明なソースからのインストールは無効になっています。設定に移動して有効にしてください。</string>
+    <string name="paypal_summary">多くのクレジットカードを受け付けます</string>
+    <string name="scanningToast">文書の検索中\nもう一度タップすると画像全体をスキャンします</string>
+    <string name="send_message">メッセージを送信</string>
+    <string name="send_message_summary">開発者にメッセージを送信します</string>
+    <string name="settings">設定</string>
+    <string name="share_app">このアプリを共有</string>
+    <string name="share_app_body">"メモ、図面、文書をカメラでスキャンするこの素晴らしいアプリを見てください: "</string>
+    <string name="share_app_subject">メモや文書をスキャンする素晴らしいアプリ</string>
+    <string name="share_app_using">リンクを共有...</string>
+    <string name="share_snackbar">画像を共有...</string>
+    <string name="stats_optin_text">Open Note Scanner が匿名の使用統計情報を開発者に送信できるようにしますか?\n\nこれは設定画面でいつでも変更できます</string>
+    <string name="stats_optin_title">使用統計</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="storage_folder">ストレージ フォルダー</string>
+    <string name="storage_folder_summary">スキャンしたファイルを保存する場所を設定します</string>
+    <string name="telegram">Telegram グループ</string>
+    <string name="telegram_summary">Telegram でプロジェクトについてチャット</string>
+    <string name="title_activity_full_image">スキャンした画像のビューアー</string>
+    <string name="title_activity_gallery">ギャラリー</string>
+    <string name="usage_stats">使用統計情報</string>
+    <string name="usage_stats_summary">開発者にさまざまな使用統計情報を送信します。 コンテンツデータは送信されません</string>
+</resources>

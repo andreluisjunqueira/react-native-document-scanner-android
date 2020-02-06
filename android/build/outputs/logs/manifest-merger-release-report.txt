@@ -1,0 +1,57 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+	package
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:2:5-34
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:1-10:12
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:4:5-77
+	android:name
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:4:22-75
+uses-permission#android.permission.CAMERA
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:5:5-64
+	android:name
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:5:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:6:22-78
+uses-feature#android.hardware.camera
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:7:5-60
+	android:name
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:7:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:8:5-70
+	android:name
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml:8:19-67
+uses-sdk
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Alessio_SSD/repos/r-native_project-container/projects/expense-claim/node_modules/react-native-documentscanner-android/android/src/main/AndroidManifest.xml
