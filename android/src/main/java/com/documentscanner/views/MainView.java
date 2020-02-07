@@ -2,7 +2,7 @@ package com.documentscanner.views;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v4.view.MotionEventCompat;
+import androidx.core.view.MotionEventCompat;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.widget.FrameLayout;
