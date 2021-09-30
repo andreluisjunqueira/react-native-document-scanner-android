@@ -1,5 +1,4 @@
-![enter image description 
-here](https://media.giphy.com/media/KZBdm9gbGGRBlRZV1t/giphy.gif)
+# react-native-document-scanner-android
 
 ## React Native module to auto scan documents (Android only)
 
@@ -11,38 +10,22 @@ Features:
 - Perspective correction and image crop
 - Flash
 
-### Get started
 
-`npm install --save react-native-documentscanner-android`
+![enter image description 
+here](https://media.giphy.com/media/KZBdm9gbGGRBlRZV1t/giphy.gif)
+## Installation
 
-In MainApplication.java, add this Line `import com.documentscanner.DocumentScannerPackage;` at the top of file,
-
-```java
-@Override
-protected  List<ReactPackage> getPackages() {
-  return Arrays.<ReactPackage>asList(
-    new  MainReactPackage(),
-    new  DocumentScannerPackage() <--- this  line,
-    ...
-  );
-}
+`npm`
+```sh
+npm install react-native-document-scanner-android
+```
+`yarn`
+```sh
+yarn add react-native-document-scanner-android
 ```
 
-#### IMPORTANT - Go to folder app/settings.gradle and add
-
-```java
-include ':react-native-documentscanner-android'
-project(':react-native-documentscanner-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-documentscanner-android/android')
-```
-
-#### Add this (don't forget)
-
-```java
-include ':openCVLibrary310'
-project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-documentscanner-android/android/openCVLibrary310')
-```
-
- #### In android/app/src/main/AndroidManifest.xml
+### Observation
+ #### In `android/app/src/main/AndroidManifest.xml`
  Change manifest header to avoid "Manifest merger error". After you add `xmlns:tools="http://schemas.android.com/tools"` should look like this:
  ```
  <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.<yourAppName>" xmlns:tools="http://schemas.android.com/tools">
@@ -51,35 +34,26 @@ project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../no
  ```
  <application tools:replace="android:allowBackup" android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:theme="@style/AppTheme">
  ```
- Add Camera permissions request:
+
+Add permissions:
  ```
  <uses-permission android:name="android.permission.CAMERA" />
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
  ```
- #### Add this to android/app/build.gradle (dependencies section)
-```
-implementation project(':react-native-documentscanner-android')
-```
+## Usage
 
-### Usage
+```tsx
+import DocumentScannerAndroid from "react-native-document-scanner-android";
 
-```javascript
-import DocumentScanner from 'react-native-documentscanner-android';
+// ...
 
-class YourComponent extends Component {
-  render() {
-    return (
-      <View>
-        <DocumentScanner
-          onPictureTaken={data => {
-            console.log(data.path);
-          }}
-          enableTorch={false}
-          detectionCountBeforeCapture={5}
-        />
-      </View>
-    );
-  }
-}
+<DocumentScannerAndroidView 
+    style={{flex: 1}}
+    onPictureTaken={(document) => console.log(document.path)}
+    onProcessing={(data) => console.log(data.processing)}
+    enableTorch={false}
+    detectionCountBeforeCapture={5}
+/>
 ```
 
 ### Properties
@@ -97,12 +71,15 @@ class YourComponent extends Component {
 
 - Get the component ref
 
-`<DocumentScanner ref={(ref) => this.scanner = ref} />`
+```tsx
+import { capture } from 'react-native-documentscanner-android';
+
+```
 
 - Then
 
-```javascript
-this.scanner.capture();
+```ts
+scanner.capture();
 ```
 
 ### Returned Image
@@ -121,10 +98,10 @@ The images are saved in `Documents` folder.
 - Pass contrast and brightness to preview
 - Use front cam
 - Use base64
+## Contributing
 
-## Contributors are welcome !!
+See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-Inspired in android project
+## License
 
-- https://github.com/ctodobom/OpenNoteScanner
-- https://github.com/Michaelvilleneuve/react-native-document-scanner
+MIT
