@@ -47,7 +47,7 @@ import DocumentScannerAndroid from "react-native-documentscanner-android";
 
 // ...
 
-<DocumentScannerAndroidView 
+<DocumentScannerAndroid 
     style={{flex: 1}}
     onPictureTaken={(document) => console.log(document.path)}
     onProcessing={(data) => console.log(data.processing)}

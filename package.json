@@ -1,6 +1,6 @@
 {
-  "name": "react-native-document-scanner-android",
-  "version": "2.0.0",
+  "name": "react-native-documentscanner-android",
+  "version": "2.0.2",
   "description": "React native package to auto scan documents",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
