@@ -60,16 +60,5 @@ dependencies {
     implementation 'com.github.ctodobom:OpenCV-3.1.0-Android:-SNAPSHOT'
     implementation 'com.google.zxing:core:3.0.1'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    implementation 'us.feras.mdv:markdownview:1.1.0'
-    implementation 'org.piwik.sdk:piwik-sdk:0.0.4'
 }
 
-/**
- *     implementation "com.android.support:appcompat-v7:28.0.0"
- implementation "com.facebook.react:react-native:0.19.+"
- implementation 'com.google.zxing:core:3.0.1'
- implementation 'com.android.support:design:28.0.0'
- implementation 'org.piwik.sdk:piwik-sdk:0.0.4'
- implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
- implementation 'us.feras.mdv:markdownview:1.1.0'
- */
