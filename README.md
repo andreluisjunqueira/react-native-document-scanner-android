@@ -1,4 +1,4 @@
-# react-native-document-scanner-android
+# react-native-documentscanner-android
 
 ## React Native module to auto scan documents (Android only)
 
@@ -17,11 +17,11 @@ here](https://media.giphy.com/media/KZBdm9gbGGRBlRZV1t/giphy.gif)
 
 `npm`
 ```sh
-npm install react-native-document-scanner-android
+npm install react-native-documentscanner-android
 ```
 `yarn`
 ```sh
-yarn add react-native-document-scanner-android
+yarn add react-native-documentscanner-android
 ```
 
 ### Observation
@@ -43,7 +43,7 @@ Add permissions:
 ## Usage
 
 ```tsx
-import DocumentScannerAndroid from "react-native-document-scanner-android";
+import DocumentScannerAndroid from "react-native-documentscanner-android";
 
 // ...
 
