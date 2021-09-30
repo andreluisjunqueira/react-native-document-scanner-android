@@ -1,0 +1,21 @@
+{
+  "name": "react-native-document-scanner-android",
+  "version": "0.1.0",
+  "summary": "React native package to auto scan documents",
+  "homepage": "http://#readme",
+  "license": "MIT",
+  "authors": "André Junqueira <junqueira.andr33@gmail.com> (http://)",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "http://.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "ios/**/*.{h,m,mm}",
+  "dependencies": {
+    "React-Core": [
+
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+module Pods_DocumentScannerAndroidExample {
+  umbrella header "Pods-DocumentScannerAndroidExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FF000000"
-    tools:context=".OpenNoteScannerActivity">
+    >
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -22,34 +22,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
-    <!--<FrameLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:fitsSystemWindows="true">-->
-
-        <!--<FrameLayout-->
-            <!--android:id="@+id/fullscreen_content_controls"-->
-            <!--style="?metaButtonBarStyle"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom|center_horizontal"-->
-            <!--android:background="@color/black_overlay"-->
-            <!--android:orientation="vertical">-->
-
-            <!--<Button-->
-                <!--android:id="@+id/dummy_button"-->
-                <!--style="?metaButtonBarButtonStyle"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:text="OPA" />-->
-
-        <!--</FrameLayout>-->
-
-    <!--</FrameLayout>-->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -69,7 +41,7 @@
             android:background="#00000000"
             android:visibility="invisible" />
 
-        <com.documentscanner.views.HUDCanvasView
+        <com.reactnativedocumentscannerandroid.views.HUDCanvasView
             android:id="@+id/hud"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
