@@ -12,7 +12,9 @@ import java.util.List;
 public class DocumentScannerAndroidPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Collections.emptyList();
+        return Arrays.<NativeModule>asList(
+            new DocumentScannerModule(reactContext)
+        );
     }
 
     @Override
