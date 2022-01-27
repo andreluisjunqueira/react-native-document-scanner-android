@@ -69,17 +69,20 @@ import DocumentScannerAndroid from "react-native-documentscanner-android";
 
 ### Manual capture
 
-- Get the component ref
+- Import `capture` method
 
 ```tsx
 import { capture } from 'react-native-documentscanner-android';
 
 ```
 
-- Then
+- Then use it 
 
 ```ts
-scanner.capture();
+<Button
+    title="Manual capture"
+    onPress={() => capture()}
+/>
 ```
 
 ### Returned Image
